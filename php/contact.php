@@ -1,7 +1,7 @@
 <?php
 
   if (isset($_POST['submit'])) {
-    $mailTo = 'wolfcorprobotics12525@gmail.com';
+    $mailTo = 'firm.accuracy.acc@gmail.com';
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $emailFrom = $_POST['email'];

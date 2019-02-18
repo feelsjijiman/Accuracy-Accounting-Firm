@@ -26,7 +26,7 @@ body.user-is-tabbing *:focus {
   align-items: center;
   @include layer(black, black, 10);
   .left {
-    background-image: url("../images/calculator.jpg");
+    background-image: url("../images/desk.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -781,6 +781,7 @@ body.user-is-tabbing *:focus {
     margin-bottom: 2vh;
   }
   .subtitle {
+    height: 8vh;
     margin-bottom: 2vh;
     font-size: 35px;
     font-family: 'Hansief';
@@ -812,7 +813,7 @@ body.user-is-tabbing *:focus {
     }
   }
   .middle {
-    background: #6a6a6a;
+    background: #9b9b9b;
 
     .line {
       animation-delay: 2s;
@@ -1242,11 +1243,11 @@ body.user-is-tabbing *:focus {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0;
-    z-index: 1000;
+    margin: 0 20vw 0 20vw;
+    z-index: 4;
 
     input, textarea {
-      margin: 0 25vw 2vh 25vw;
+      margin: 0 0 2vh 0;
       width: 50vw;
       border: 0;
       box-sizing: border-box;
@@ -1272,14 +1273,25 @@ body.user-is-tabbing *:focus {
         box-shadow: 0 5px 8px 0 rgba(0,0,0,0.24), 0 10px 25px 0 rgba(0,0,0,0.19);
       }
     }
-    .appt {
-      cursor: pointer;
+    .setappt {
+      width: 50vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
 
-      &::-webkit-inner-spin-button {
-        display: none;
-      }
-      &::-webkit-calendar-picker-indicator {
-        opacity: 1;
+      .appt {
+        width: 24vw;
+        cursor: pointer;
+
+        &::-webkit-inner-spin-button {
+          display: none;
+        }
+        &::-webkit-calendar-picker-indicator {
+          opacity: 1;
+        }
+        &::-ms-clear {
+          display: none;
+        }
       }
     }
     .nameinput, .phoneinput {
@@ -1300,7 +1312,7 @@ body.user-is-tabbing *:focus {
 
       .sendinputs {
         margin: 0 0.5vw 0 0 !important;
-        width: 8.5vw !important;
+        width: 24vw !important;
         height: 5vh;
         background-color: white;
         transition: .5s;
@@ -1343,6 +1355,7 @@ body.user-is-tabbing *:focus {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10vh;
     height: 5vh;
     padding: 0 1vw 0 1vw;
     background-color: white;

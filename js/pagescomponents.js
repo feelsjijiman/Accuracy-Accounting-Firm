@@ -200,6 +200,7 @@ $(window).on("load", function() {
   let selected = 0;
 
   function codeSnippetRunCarousel() {
+    /*
     if (running) {
       selected %= 4;
       $('.codesnippet').attr('src',`css/images/${codepictures[selected]}`);
@@ -219,6 +220,7 @@ $(window).on("load", function() {
         }, 1000);
       }, 5400);
     }
+    */
   };
 
   //B3 Dropdown stuff
