@@ -92,6 +92,10 @@ $(window).on("load", function() {
 
   function panelScrollDownManual(panel, animationForward, animationBack) {
     $(panel).on('DOMMouseScroll mousewheel', function (e) {
+      console.log("scrolling");
+      console.log(e.originalEvent.detail);
+      console.log(e.originalEvent.wheelDelta);
+      console.log(notZooming);
       if ((e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) && notZooming) {
         console.log("scrolling down");
         $(this).removeClass(`animated ${animationForward}`);

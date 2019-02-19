@@ -1,10 +1,9 @@
 import { hideSponsors } from './maintest.js';
 
 $(window).on("load", function() {
-  document.addEventListener('touchmove', function(e) {
-        e.preventDefault();
-  }, false);
-
+  window.addEventListener( 'touchmove', function(e) {
+    e.preventDefault();
+  }, {passive: false});
   $('.closeSec').hide();
   $('.infotext').hide();
   $('.boxtitle').hide();
@@ -271,10 +270,10 @@ $(window).on("load", function() {
     let classed = this.className;
     console.log(classed);
 
-    if (classed.search('B') > 0 || classed.search('D d') > 0 || classed.search('E e') > 0  || classed.search('A a') > 0 || classed.search('A5') > 0 || classed.search('C c') > 0 || classed.search('A1') > 0 || classed.search('notimed viz') > 0) {
+    if (classed.search('B') > 0 || classed.search('D d') > 0 || classed.search('E e') > 0  || classed.search('A a') > 0 || classed.search('A5') > 0 || classed.search('C c') > 0 || classed.search('notimed viz') > 0) {
       $('.nav .menu-open').addClass('invertedColors');
       $('.nav .back').addClass('invertedColors');
-    } else if (classed.search('A3') > 0) {
+    } else if (classed.search('A3') > 0 || classed.search('A1') > 0) {
       $('.nav .menu-open').addClass('invertedColors');
       $('.nav .back').removeClass('invertedColors');
     } else if (classed.search('A2') > 0 || classed.search('A4') > 0) {
