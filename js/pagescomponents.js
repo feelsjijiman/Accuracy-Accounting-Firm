@@ -38,11 +38,6 @@ $(window).on("load", function() {
     ericSection = true;
     a2Maker.newPanel("e r i c", "As a Team Lawyer, Eric, aka h0dL - 3 - Jumpman - Ankle Bully, who's in 8th grade, understands the rulebook front to back, in addition to programming the encoder-based autonomous program on the Crater Side. He enjoys programming, playing basketball, and Bitcoin.", ".A2", ".leftside");
   });
-  $('.A2 .rightside .images .imgbottomright').click(function() {
-    ericSection = false;
-    currentBio = 0;
-    a2Maker.newPanel("d a n i e l", "As Captain of Multimedia, Daniel programs our website in addition to the robot. He created the current website, and also the time-based autonomous programs for the competition. He enjoys learning new programming languages, playing basketball, and HODLING.", ".A2", ".leftside");
-  });
   $('.A2 .rightside .images .imgbottommiddle').click(function() {
     ericSection = false;
     currentBio = 0;
@@ -65,9 +60,6 @@ $(window).on("load", function() {
       }
     }
   });
-  $('.A3 .leftside .images .imgbottomright').click(function() {
-    a3Maker.newPanel("K E V I N", "As Maintenance Captain for our team, Kevin is a builder during practice but also a emergency builder during competition. Kevin contributes a good majority of the robot, mainly the hanging mechanism and the scoring mechanism. Kevin is also the driver coach, guiding them during matches. He helps with Programming Documentation, making sure everything gets done on time. When Kevin’s not doing robotics, he watches anime, plays games with friends, and practices badminton. ", ".A3", ".rightside");
-  });
   $('.A3 .leftside .images .imgbottomleft').click(function() {
     a3Maker.newPanel("K A W I N", "Kawin stands as the Robot Captain, overlooking the robot from start to end. He is a key builder for our robot, starting from assembling the chassis to last-minute fixes. Other than that, Kawin works on the Promote video and helps out other team members with mechanical issues. At school, Kawin is part of the marching band; at home, he watches anime.", ".A3", ".rightside");
   });
@@ -77,16 +69,7 @@ $(window).on("load", function() {
   $('.A3 .leftside .images .imgtopleft').click(function() {
     a3Maker.newPanel("G L O R Y", "Glory, Electrician Captain, helps with organizing the wires and wiring the robot. With the use of zip ties, she prevents the wires from turning into a spaghetti like mess and interfering with the robot’s mechanisms. She is also a scouter and keeps track of game points during practice runs and meets. She is a neat freak who enjoys reading and talking to plants.", ".A3", ".rightside");
   });
-  $('.A3 .leftside .images .imgtopright').click(function() {
-    a3Maker.newPanel("I A N", "Ian Ceballos is an eight grader at Suzanne Middle School, who is also part of team Wolf Corp. He plays basketball, training himself at least three days a week. He also often indulges himself in the card game, Yu-Gi-Oh!. On Wolf Corp, he is the main driving captain, who strives to perfect his technique controlling the robot and maximizing its capabilities. A somewhat Jack of all trades, he is also part of other departments such as building and Engineering Notebook management.", ".A3", ".rightside");
-  });
-  $('.A3 .leftside .images .imgtopmiddle').click(function() {
-    a3Maker.newPanel("G O R D O N", "CAD Captain Gordon works on 3D documenting the robot and helps to build the robot. Gordon’s CAD (Computer-Aided Design) files are useful for taking a look at our robot at angles we usually can’t do physically. It also helps share our ideas with the rest of the world, so they can build and learn off it. CAD helps prototype the robot on a computer so that it wouldn’t break when we build it. When building it, he also helps out. Other than robotics, Gordon plays on the golf team and is a tech and anime enthusiast.", ".A3", ".rightside");
-  });
 
-  $('.A4 .rightside .images .imgbottomright').click(function() {
-    a4Maker.newPanel("e v a n", "Evan is the head of Financing for our team, serving as the UCTA for Wolf Corp. He manages our balances and regularly inputs spendings and raised money. Evan also contributes to building the robot to give an extra hand. He works with Google Sheets and lots of numbers. Evan enjoys gaming, playing basketball, and practicing piano.", ".A4", ".leftside");
-  });
   $('.A4 .rightside .images .imgbottomleft').click(function() {
     a4Maker.newPanel("s a r a h", "Sarah controls the Engineering Notebook, an important part of the . It keeps all the documents of our team, even what we have as snacks for each practice. Sarah also meets with businesses in person, asking for a funding to keep our team going. Sarah loves to listen to music, watch the newest movies, and hang out with friends.", ".A4", ".leftside");
   });
@@ -96,27 +79,12 @@ $(window).on("load", function() {
   $('.A4 .rightside .images .imgtopleft').click(function() {
     a4Maker.newPanel("j a s o n", "Jason works on the Engineering Section for our team, drives the robot during the competition, and helps build and maintain the robot. In the Engineering Section, Jason includes the robot’s mechanisms and functionalities. When he’s not doing robotics, he plays games, dragonboats, and practices the handbell.", ".A4", ".leftside");
   });
-  $('.A4 .rightside .images .imgtopright').click(function() {
-    a4Maker.newPanel("c o n o r", "Conor oversees Documentation for our team. He ensures that anything from fundraising to Autonomous runs is recorded down, either on paper or online. Conor also keeps check on the robot, making sure it’s not broken or fixing it when it is. In his free time, Conor reads, sleeps, and plays with his dog Tara.", ".A4", ".leftside");
-  });
-  $('.A4 .rightside .images .imgtopmiddle').click(function() {
-    a4Maker.newPanel("n a t h a n", "Nathan is the Business leader for Wolf Corp and supervises all main operations in the category. He reaches out to businesses as a part of that, looking for some to support our team. Besides that, he is also a builder, scouter, and outreach documenter. Nathan likes to play PC games, swim, listen to music, and practice the piano.", ".A4", ".leftside");
-  });
-  $('.A4 .rightside .images .imgextra').click(function() {
-    a2Maker.newPanel("c h a n d r a r k", "Chandrark is the Head of Scouting and Team Statistician. For Scouting, he manages all the scouting reports from competition and analyzes them to determine the best alliance. As Statistician, Chandrark records all the Driving and Autonomous testing to better display what we can work on and how to get better. For fun, Chandrark watches TV and plays video games like Overwatch, Fortnite, and Super Smash Bros.", ".A4", ".leftside");
-  });
 
   $('.A5 .botside .images .imgfarleft').click(function() {
     a5Maker.newPanel("c o n n e c t i n g \xa0\xa0w i t h \xa0\xa0o t h e r s", "As Wolf Corp., our goal is to inspire other kids to work as a team and get involved in STEM education. The robot isn’t the only part of the competition, and we never aim to just get first place in the competition. Truly impacting the community and people around us to be excited about robotics and STEM is what we aspire to do. Instead of just focusing on our team, we aim to influence brilliant teenagers and kids to improve the world.", ".A5", ".topside");
   });
   $('.A5 .botside .images .imgkindaleft').click(function() {
     a5Maker.newPanel("o u r \xa0\xa0r o b o t i c s \xa0\xa0c l u b", "At Walnut High School, we were able to set up the first robotics club to encourage our school to learn more about STEM and robotics. We inspired two teachers, Ms. Lindemann and Mr. Madrid, to help support our cause and become our advisors. Mr. Madrid helps out on the advisor-required meetings and has useful tips for running the club. We have meetups every other Tuesday during lunch at Ms. Lindemann’s classroom, to discuss our robot and teach them some new information. Students can come anytime during the season and is open to everyone. Our club has successfully connected Walnut High to FIRST.", ".A5", ".topside");
-  });
-  $('.A5 .botside .images .imgmidleft').click(function() {
-    a5Maker.newPanel("o u t r e a c h", "Outreaches help us connect to all ages and get them thinking about the STEM field. We have done more than 70 outreaches around the region, such as at Pasadena Library, Imaginology Expo, and LA Fair. We’ve gone to all these places to showcase our robots and let children from 3 years old to adults interested in our team to try driving it and picking up blocks. Without outreaches, people wouldn’t know about a great revolution happening in technology.", ".A5", ".topside");
-  });
-  $('.A5 .botside .images .imgmidright').click(function() {
-    a5Maker.newPanel("h a v i n g \xa0\xa0a \xa0\xa0h e a r t \xa0\xa0o f \xa0\xa0h o p e", "Wolf Corp also emphasizes helping the disadvantaged and strive to bring happiness and great experiences to them through robotics. For example, we visit non-profit organization Heart of Hope to host a STEM activity once a month for more than 60 special needs children and adults. Our goal is to help connect them to the real world by using the FIRST program. We participated in the Autism Walk, Relay for Life, and the Walnut city Trunk or Treat in order to give back to our community. In addition, we raised money to support the American Cancer Society. Caring for others is a moral we should have in doing anything, not just robotics.", ".A5", ".topside");
   });
   $('.A5 .botside .images .imgkindaright').click(function() {
     a5Maker.newPanel("e x p e r t s", "Our team has connected to more than 20 STEM experts for knowledge. For example, we visited Walnut Valley Robotics to learn about electrical power tools. We met with Dr. Spiros, the Manager of Outreach at CalTech. He reviewed our outreaches and encouraged us to do more. Also, Mr. Jacob, a JPL robotics engineer helped us with our scoring mechanism issue and suggested we have a pre-check and post-check for our robot before and after a match. We went to the “Crush Master and Grinding Company” who gave us a tour and introduced us to CNC and WATER JET machines which they later used to cut multiple pieces for our robot. Experts are always a big help to us, and are a great part of the community.", ".A5", ".topside");
@@ -164,12 +132,6 @@ $(window).on("load", function() {
         setInterval(function() {codeSnippetRunCarousel()}, 5400);
         botRightNotClicked = false;
     }
-  });
-  $('.B2 .sections .topmid button').click(function() {
-    secEditor.hideAllSecExceptAndEnlarge('.topmid', '.B2');
-  });
-  $('.B2 .sections .botmid button').click(function() {
-    secEditor.hideAllSecExceptAndEnlarge('.botmid', '.B2');
   });
   $('.B2 .sections .closeSec').click(function() {
     running = false;
@@ -481,7 +443,7 @@ class sectionMan {
     if (panel == '.B1') {
       this.sections = ['.topleft', '.topright', '.botleft', '.botright'];
     } else if (panel == '.B2') {
-      this.sections = ['.topleft', '.topright', '.botleft', '.botright', '.botmid', '.topmid'];
+      this.sections = ['.topleft', '.topright', '.botleft', '.botright'];
     } else {
       console.log("Invalid panel");
     }

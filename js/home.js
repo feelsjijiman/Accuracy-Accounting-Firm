@@ -83,6 +83,9 @@ $(window).on("load", function() {
   $(document).keydown(function(e) {
     if (e.keyCode == 17) {
       notZooming = false;
+      setTimeout(function () {
+        notZooming = true;
+      }, 4000);
     }
   }).keyup(function(e) {
     if (e.keyCode == 17) {

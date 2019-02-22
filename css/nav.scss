@@ -54,7 +54,7 @@
 body {
   /*background: url("images/oh.jpg") 50% 0%;
   background-size: cover;*/
-  margin: !important 0;
+  margin: 0 !important;
   background-color: lightgrey;
   & > .inner {
     display: none;
@@ -251,12 +251,5 @@ a {
   .menu {
     width: 20px!important;
     height: 20px!important;
-  }
-}
-/* Small devices (portrait phones, 420-576) */
-@media (max-width: 420px) {
-  .menu {
-    width: 15px!important;
-    height: 15px!important;
   }
 }
