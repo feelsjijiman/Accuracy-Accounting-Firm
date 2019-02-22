@@ -188,6 +188,7 @@
   border-bottom: 50vh solid transparent;
   background-color: #4d8bbc;
   transition: 1s;
+  cursor: pointer;
 
   .title {
     position: relative;
@@ -222,6 +223,8 @@
   border-bottom: 50vh solid transparent;
   background-color: #aeaeae;
   transition: 1s;
+  cursor: pointer;
+  
   .title {
     animation-delay: .4s;
   }

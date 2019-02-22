@@ -46,6 +46,11 @@ body.user-is-tabbing *:focus {
   display: flex;
   justify-content: right;
   @include layer(white, white, 9);
+  background-image: url('../images/pencils.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   .rightside {
     display: flex;
     flex-direction: column;
@@ -194,9 +199,11 @@ body.user-is-tabbing *:focus {
         }
         .imgbottommiddle {
           animation-delay: 0.66s;
+          filter: hue-rotate(-30deg);
         }
         .imgbottomleft {
           animation-delay: 0.33s;
+          filter: hue-rotate(-30deg);
         }
       }
   }
@@ -259,6 +266,10 @@ body.user-is-tabbing *:focus {
         }
         .imgbottomleft {
           animation-delay: 0.5s;
+          filter: saturate(12) hue-rotate(-19deg);
+        }
+        .imgbottommiddle {
+          filter: saturate(12) hue-rotate(-19deg);
         }
       }
   }
@@ -367,6 +378,12 @@ body.user-is-tabbing *:focus {
   width: 80vw !important;
   height: 70vh !important;
 }
+.imggone {
+  &::after {
+    transition: 0.5s !important;
+    opacity: 0!important;
+  }
+}
 //                          //
 .B1 {
   display: flex;
@@ -405,6 +422,7 @@ body.user-is-tabbing *:focus {
     box-sizing: border-box;
     height: 80vh;
     width: 100vw;
+    transition: 1s;
 
     .topleft, .topright, .botleft, .botright {
       display: flex;
@@ -456,12 +474,6 @@ body.user-is-tabbing *:focus {
         font-size: 30px;
         opacity: 0;
       }
-      .compvideo {
-        margin: 5vh 0 0 0;
-        border: 5px solid white;
-        width: 40vw;
-        height: 35vh;
-      }
 
       &:hover {
         animation-play-state: paused;
@@ -474,17 +486,64 @@ body.user-is-tabbing *:focus {
           opacity: 1;
         }
       }
+      &::after {
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        z-index: -1;
+        transition: 0.5s 1s;
+      }
     }
     .topleft {
+      &::after {
+        content: "";
+        background: url('../images/customer.png');
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+      }
+
       @include fourSectionPos(topleft, $sameVertMargin, $sameHorizMargin);
     }
     .topright {
+      &::after {
+        content: "";
+        background: url('../images/customer.png');
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+      }
+
       @include fourSectionPos(topright, $sameVertMargin, $sameHorizMargin);
     }
     .botleft {
+      &::after {
+        content: "";
+        background: url('../images/customer.png');
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+      }
+
       @include fourSectionPos(botleft, $sameVertMargin, $sameHorizMargin);
     }
     .botright {
+      &::after {
+        content: "";
+        background: url('../images/customer.png');
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+      }
+
       @include fourSectionPos(botright, $sameVertMargin, $sameHorizMargin);
     }
     .closeSec {
@@ -546,8 +605,8 @@ body.user-is-tabbing *:focus {
       border: 5px solid white;
       width: 24vw;
       height: 30vh;
-      transition: 1s;
       @include flashborder;
+      transition: 1s;
       animation: flashborder 2s linear infinite;
       animation-delay: 1s;
 
@@ -605,17 +664,64 @@ body.user-is-tabbing *:focus {
           opacity: 1;
         }
       }
+      &::after {
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        z-index: -1;
+        transition: 0.5s 1s;
+      }
     }
     .topleft {
       @include fourSectionPos(topleft, $sameVertMargin, $sameHorizMargin);
+
+      &::after {
+        content: "";
+        background: url('../images/founders.png');
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+      }
     }
     .topright {
+      &::after {
+        content: "";
+        background: url('../images/accomplishment.png');
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+      }
+
       @include fourSectionPos(topright, $sameVertMargin, $sameHorizMargin);
     }
     .botleft {
+      &::after {
+        content: "";
+        background: url('../images/customer.png');
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+      }
+
       @include fourSectionPos(botleft, $sameVertMargin, $sameHorizMargin);
     }
     .botright {
+      &::after {
+        content: "";
+        background: url('../images/research.png');
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+      }
+
       @include fourSectionPos(botright, $sameVertMargin, $sameHorizMargin);
     }
     .closeSec {
@@ -829,7 +935,7 @@ body.user-is-tabbing *:focus {
       position: relative;
       margin: 2vw;
       width: 15vw;
-      height: 26vw;
+      height: 22vw;
       cursor: pointer;
       transition-delay: .25s !important;
       transition: .5s;
@@ -837,14 +943,14 @@ body.user-is-tabbing *:focus {
 
       img {
         width: 15vw;
-        height: 26vw;
+        height: 22vw;
       }
       .awoverlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 11vw;
-        height: 22vw;
+        height: 18vw;
         padding: 2vw;
         background-color: #1d92e7;
         text-align: center;
@@ -1565,10 +1671,10 @@ body.user-is-tabbing *:focus {
         font-size: 14px!important;
       }
       .droplabel {
-        font-size: 12px!important;
+        font-size: 10px!important;
       }
       .dropdown {
-        font-size: 12px!important;
+        font-size: 10px!important;
       }
       .dropbutt {
         width: 12px!important;
