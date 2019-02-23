@@ -380,8 +380,13 @@ body.user-is-tabbing *:focus {
 }
 .imggone {
   &::after {
-    transition: 0.5s !important;
+    transition: 0.5s 0s!important;
     opacity: 0!important;
+  }
+}
+.halfgone {
+  &::after {
+    opacity: 0.6!important;
   }
 }
 //                          //
@@ -781,7 +786,7 @@ body.user-is-tabbing *:focus {
       animation-delay: 2s;
     }
     .infofromsides {
-      margin: 10vh 5vw 0 5vw;
+      margin: 5vh 5vw 0 5vw;
       color: white;
       font-size: 18px;
       font-family: 'Titillium Web';
@@ -935,22 +940,25 @@ body.user-is-tabbing *:focus {
       position: relative;
       margin: 2vw;
       width: 15vw;
-      height: 22vw;
+      height: 26vw;
+      border: 5px solid white;
       cursor: pointer;
       transition-delay: .25s !important;
       transition: .5s;
       z-index: 6;
+      @include flashborder;
+      animation: flashborder 2s infinite;
 
       img {
         width: 15vw;
-        height: 22vw;
+        height: 26vw;
       }
       .awoverlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 11vw;
-        height: 18vw;
+        height: 22vw;
         padding: 2vw;
         background-color: #1d92e7;
         text-align: center;
@@ -974,7 +982,7 @@ body.user-is-tabbing *:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5vh;
+    margin-top: 9vh;
     height: 5vh;
     padding: 0 1vw 0 1vw;
     background-color: white;
@@ -1017,9 +1025,12 @@ body.user-is-tabbing *:focus {
         margin: 2vw;
         width: 15vw;
         height: 26vw;
+        border: 5px solid white;
         cursor: pointer;
         transition-delay: .25s !important;
         transition: .5s;
+        @include flashborder;
+        animation: flashborder 2s linear infinite;
 
         img {
           width: 15vw;
@@ -1399,10 +1410,17 @@ body.user-is-tabbing *:focus {
     }
   }
 }
-@media (max-width: 1340px) {
+@media (max-width: 1440px) {
   .viz {
     .selecttitle {
       font-size: 45px;
+    }
+  }
+  .B3 {
+    .middle {
+      .infofromsides {
+        font-size: 15px!important;
+      }
     }
   }
 }
@@ -1421,6 +1439,27 @@ body.user-is-tabbing *:focus {
       font-size: 40px!important;
     }
   }
+  .B3 {
+    .droplabel {
+      font-size: 14px!important;
+    }
+    .dropdown {
+      margin: 0!important;
+      font-size: 12px!important;
+    }
+    .subtitle {
+      font-size: 25px!important;
+    }
+    .title {
+      font-size: 28px!important;
+    }
+    .middle {
+      .infofromsides {
+        margin: 3vh 5vw 0 5vw!important;
+        font-size: 13px!important;
+      }
+    }
+  }
   .maintext {
     margin: 3.5vh!important;
     font-size: 16px!important;
@@ -1437,8 +1476,12 @@ body.user-is-tabbing *:focus {
   }
   .C {
     .stories {
-      .award {
-        .caption {
+      .story {
+        width: 15vw!important;
+        height: 30vw!important;
+        .awoverlay {
+          width: 11vw!important;
+          height: 26vw!important;
           h1 {
             font-size: 14px!important;
           }
@@ -1481,6 +1524,27 @@ body.user-is-tabbing *:focus {
     width: 70px!important;
     height: 3px!important;
   }
+  .B3 {
+    .droplabel {
+      font-size: 14px!important;
+    }
+    .dropdown {
+      margin: 0!important;
+      font-size: 12px!important;
+    }
+    .subtitle {
+      font-size: 25px!important;
+    }
+    .title {
+      font-size: 28px!important;
+    }
+    .middle {
+      .infofromsides {
+        margin: 3vh 5vw 0 5vw!important;
+        font-size: 11px!important;
+      }
+    }
+  }
   .C {
     .stories {
       width: 100vw!important;
@@ -1493,10 +1557,6 @@ body.user-is-tabbing *:focus {
           h1 {
             font-size: 12px!important;
           }
-        }
-        img {
-          width: 18vw!important;
-          height: 37vw!important;
         }
       }
     }
@@ -1512,10 +1572,6 @@ body.user-is-tabbing *:focus {
             h1 {
               font-size: 12px!important;
             }
-          }
-          img {
-            width: 18vw!important;
-            height: 37vw!important;
           }
         }
       }
@@ -1558,8 +1614,8 @@ body.user-is-tabbing *:focus {
   }
   .C {
     .stories {
-      .award {
-        .caption {
+      .story {
+        .awoverlay {
           h1 {
             font-size: 10px!important;
           }
@@ -1694,10 +1750,6 @@ body.user-is-tabbing *:focus {
             font-size: 9px!important;
           }
         }
-        img {
-          height: 42vw!important;
-          width: 30vw!important;
-        }
       }
     }
     .morestories {
@@ -1711,10 +1763,6 @@ body.user-is-tabbing *:focus {
             h1 {
               font-size: 9px!important;
             }
-          }
-          img {
-            height: 42vw!important;
-            width: 30vw!important;
           }
         }
       }

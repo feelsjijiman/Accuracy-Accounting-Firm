@@ -73,18 +73,40 @@ $(window).on("load", function() {
     a5Maker.newPanel("l e v e l \xa0\xa03", "From helping other teams to holding workshops, we also encourage other teams to do their best. Our team mentored multiple FLL teams such as HEXA Challengers who are advancing to the World Festival this year. At the beginning of the season, we hosted 2 programming workshops for 12 new coaches at Suzanne Middle school. Every summer, we host a robotics workshop at the walnut library where we teach kids how to build and program robots. We also held 2 workshops for new FTC teams and volunteered at 3 FLL and 2 FTC tournaments.", ".A5", ".topside");
   });
 
+  //b1andb2
+
   $('.B1 .sections .topleft button').click(function() {
     secEditor.hideAllSecExceptAndEnlarge('.topleft', '.B1');
     setTimeout(function(){$('.compvideo').fadeIn();}, 300);
   });
+  $('.B1 .sections .topleft').mouseenter(() => {
+    $('.B1 .sections .topleft').addClass('halfgone');
+  }).mouseleave(() => {
+    $('.B1 .sections .topleft').removeClass('halfgone');
+  });
   $('.B1 .sections .topright button').click(function() {
     secEditor.hideAllSecExceptAndEnlarge('.topright', '.B1');
+  });
+  $('.B1 .sections .topright').mouseenter(() => {
+    $('.B1 .sections .topright').addClass('halfgone');
+  }).mouseleave(() => {
+    $('.B1 .sections .topright').removeClass('halfgone');
   });
   $('.B1 .sections .botleft button').click(function() {
     secEditor.hideAllSecExceptAndEnlarge('.botleft', '.B1');
   });
+  $('.B1 .sections .botleft').mouseenter(() => {
+    $('.B1 .sections .botleft').addClass('halfgone');
+  }).mouseleave(() => {
+    $('.B1 .sections .botleft').removeClass('halfgone');
+  });
   $('.B1 .sections .botright button').click(function() {
     secEditor.hideAllSecExceptAndEnlarge('.botright', '.B1');
+  });
+  $('.B1 .sections .botright').mouseenter(() => {
+    $('.B1 .sections .botright').addClass('halfgone');
+  }).mouseleave(() => {
+    $('.B1 .sections .botright').removeClass('halfgone');
   });
   $('.B1 .sections .closeSec').click(function() {
     $('.B1 .sections .closeSec').fadeOut(250);
@@ -96,11 +118,26 @@ $(window).on("load", function() {
   $('.B2 .sections .topleft button').click(function() {
     secEditor.hideAllSecExceptAndEnlarge('.topleft', '.B2');
   });
+  $('.B2 .sections .topleft').mouseenter(() => {
+    $('.B2 .sections .topleft').addClass('halfgone');
+  }).mouseleave(() => {
+    $('.B2 .sections .topleft').removeClass('halfgone');
+  });
   $('.B2 .sections .topright button').click(function() {
     secEditor.hideAllSecExceptAndEnlarge('.topright', '.B2');
   });
+  $('.B2 .sections .topright').mouseenter(() => {
+    $('.B2 .sections .topright').addClass('halfgone');
+  }).mouseleave(() => {
+    $('.B2 .sections .topright').removeClass('halfgone');
+  });
   $('.B2 .sections .botleft button').click(function() {
     secEditor.hideAllSecExceptAndEnlarge('.botleft', '.B2');
+  });
+  $('.B2 .sections .botleft').mouseenter(() => {
+    $('.B2 .sections .botleft').addClass('halfgone');
+  }).mouseleave(() => {
+    $('.B2 .sections .botleft').removeClass('halfgone');
   });
   let botRightNotClicked = true;
   let running = false;
@@ -112,6 +149,11 @@ $(window).on("load", function() {
         setInterval(function() {codeSnippetRunCarousel()}, 5400);
         botRightNotClicked = false;
     }
+  });
+  $('.B2 .sections .botright').mouseenter(() => {
+    $('.B2 .sections .botright').addClass('halfgone');
+  }).mouseleave(() => {
+    $('.B2 .sections .botright').removeClass('halfgone');
   });
   $('.B2 .sections .closeSec').click(function() {
     running = false;
@@ -199,12 +241,12 @@ $(window).on("load", function() {
       dropdownrightopen = true;
     }
   });
-  dropdownManipulator.handleChoice(1, '.left', 'Advisory Financial Services Director', 'The chassis of our robot is an Andymark build which helped us save a lot of time. The base is very stable and tight, so nuts and screws won’t get loose and maintenance for it is at a minimum. The parts are mainly metal, with the exception of a plexiglass bottom.  It carries the weight of everything else and so far has done a great job during the season.');
-  dropdownManipulator.handleChoice(2, '.left', 'International Tax Director', 'On the sides of the robot are plexiglass protectors to keep our robot intact. They help absorb shock, so an accidental hit won’t disconnect our robot. Wires and Expansion Hubs on our robot are protected by it, as well as the phone. It prevents direct contact of virtually anything to our core. With the two protectors, we can rest assured that disconnections won’t happen.');
-  dropdownManipulator.handleChoice(1, '.right', 'Tax Innovation Reporting and Strategy Associate', 'The four wheels are the essential part for movement of our whole robot. They are all mecanum wheels, with AndyMark Neverest 40 motors. They all have a diameter of 4 inches and provide the ability to move forward, back, sidestep left, sidestep right, turn either direction and even move and turn at the same time (like drifting without the brake). With the four wheels, we can move quickly from the lander to crater to score gold as well as get full points in Autonomous just in time. The wheels have encoders attached too, measuring 1120 CPR (counts per revolution) and 4480 counts for a tile. With our wheels, our robot can move very well in multiple ways regardless if Autonomous or Tele-Op.');
-  dropdownManipulator.handleChoice(2, '.right', 'Financial Consulting Senior Associate', 'The intake system is the first step of a two-step process of scoring minerals. It consists of an x rail for extending a tray with two servos: one that controls a zip tie intake and the other that flips the tray into the second system. The intake system is able to reach out from outside of the crater using an x rail to grab minerals. Once inside, the zip ties take in up to two minerals and the x rail retracts. Once it retracts, the tray flips and turns the minerals into the deposit system. This method is fast and only has a short delay when taking in the minerals. ');
-  dropdownManipulator.handleChoice(3, '.right', 'Financial Planning and Analysis Sr Associate', 'As the second part of our robot’s scoring process, it takes from the intake system and drops it into the lander. The deposit system has a tray and x rail as well, with a servo on the tray connected to a sheet of plexiglass preventing the minerals from sliding and another servo connected to zip ties on the tray. When the intake system turns over the tray, it falls into the deposit systems tray. The intake system is turned back, and its linear slide raises the deposit system above the lander. The servo rotates up the closed plexiglass and the other servo uses zip ties to push off the minerals. This pairs well with the intake system and leads to effective scoring.');
-  dropdownManipulator.handleChoice(4, '.right', 'International Tax Senior Associate', 'Hanging for our robot is one the big points in End Game and Autonomous. We use a motor to turn a gear which in turn (get it) turns a threaded rod that moves the hanging bar up and down. The AndyMark 60 motor provides enough strength and has large enough stall torque to prevent it from burning out and continue to lift it up from the ground. It takes about 6 seconds to unhang and hang from the lander, resulting in a total of 85 points. Without hanging, winning matches would be very hard.');
+  dropdownManipulator.handleChoice(1, '.left', 'Advisory Financial Services Director', 'As a Director, you’ll work as part of a team of problem solvers with extensive consulting and industry experience, helping our clients solve their complex business issues from strategy to execution.<br><br>Requirements:<br>Bachelor Degree, 10 Years of Experience<br><br>Preferred Skills:<br>- Thorough experience identifying and addressing client needs: developing and sustaining deep client relationships using networking, negotiation and persuasion skills to identify and sell potential new service opportunities; preparing and presenting complex written and verbal materials; and defining resource requirements, project workflow, budgets, billing and collection.<br> - Thorough experience as a team leader: leading teams to generate a vision, establish direction and motivate members, create an atmosphere of trust, leverage diverse views, coach staff, and encourage improvement and innovation.');
+  dropdownManipulator.handleChoice(2, '.left', 'International Tax Director', 'As a Director, you’ll work as part of a team of problem solvers with extensive consulting and industry experience, helping our clients solve their complex business issues from strategy to execution.<br><br>Requirements:<br>Bachelor Degree in Accounting, 8 Years of Experience, CPA, Enrolled Agent, or Member of the Bar<br><br>Preferred Skills:<br>Extensive knowledge of assisting companies to understand and assess the tax impact of company business, operations and transactions in multiple jurisdictions. Extensive technical skills in structural realignment, cash and financial statement effective tax rate analysis and improvement of tax efficiencies of cross-border flows. Thorough experience identifying and addressing client needs. Thorough experience as a team leader: leading teams to generate a vision, establish direction and motivate members, create an atmosphere of trust, leverage diverse views, coach staff, and encourage improvement and innovation.');
+  dropdownManipulator.handleChoice(1, '.right', 'Tax Innovation Reporting and Strategy Associate', 'As a Senior Associate, you’ll work as part of a team of problem solvers with extensive consulting and industry experience, helping our clients solve their complex business issues from strategy to execution.<br><br>Requirements:<br>Bachelor Degree, Accounting, Business Administration/Management, Economics, Finance and Technology, 2 years of experience, and certification in one of the following: CPA, EA, Admission to the Bar<br><br>Preferred Skills:<br>Demonstrates a thorough understanding of ERP-based solutions to contribute as a key team member in consulting, designing, implementing and supporting those solutions as demonstrated by the successful management of enterprise application architecture, selection, implementation and optimization projects. Demonstrates proven thorough abilities and success utilizing ERP-based solutions.');
+  dropdownManipulator.handleChoice(2, '.right', 'Financial Consulting Senior Associate', 'As a Senior Associate, you’ll work as part of a team of problem solvers with extensive consulting and industry experience, helping our clients solve their complex business issues from strategy to execution.<br><br>Requirements:<br>MBA<br><br>Preferred Skills:<br>- Demonstrates proven thorough knowledge with the design of operational metrics to support strategic plans, dashboard design and benchmarking/standard industry practices. - Demonstrates the ability to write and deliver proposals to prospective clients. - Demonstrates experience as a team leader: creating a positive environment by monitoring workloads of the team while meeting client expectations and respecting the work-life quality of team members; providing candid, meaningful feedback in a timely manner; and keeping leadership informed of progress and issues. ');
+  dropdownManipulator.handleChoice(3, '.right', 'Financial Planning and Analysis Sr Associate', "A career in our Financial Operations practice, within Finance Consulting services, will provide the opportunity to work alongside CEOs, CFOs, controllers, and treasurers to optimize the structure of their finance functions and improve their contribution to the business. As a Senior Associate, you’ll work as part of a team of problem solvers with extensive consulting and industry experience, helping our clients solve their complex business issues from strategy to execution.<br><br>Requirements:<br>4 years of experience, a master's degree in accounting, business administration, or finance<br><br>Preferred Skills:<br>Demonstrates some proven knowledge and success in advising global organizations on improving efficiency and effectiveness in transaction processing, close and consolidation, budgeting and forecasting, and internal and external reporting.");
+  dropdownManipulator.handleChoice(4, '.right', 'International Tax Senior Associate', 'A career within International Tax services will provide you with the opportunity to help multinational companies address their cross border tax needs both locally and globally by managing their global tax rates, finding areas of cost reduction, and responding to inquiries from regulatory authorities.<br><br>Requirements:<br>Bachelor Degree in Accounting, CPA, 3 years of experience<br><br>Preferred Skills:<br>Considerable knowledge of corporate tax including tax research, compliance and consulting within an international taxation environment. Working knowledge of assisting companies to understand and assess the tax impact of company business, operations and transactions in multiple jurisdictions. Proficient technical skills in structural realignment, cash and financial statement effective tax rate analysis and improvement of tax efficiencies of cross-border flows.');
 
   $('.panel').hover(function () {
     let classed = this.className;
@@ -475,7 +517,6 @@ class dropdownMan {
       showCursor: false,
       onComplete: (self) => {
         this.optionSelected = false;
-        alert(1);
       }
     };
     this.textOptions = {
