@@ -14,9 +14,9 @@ $(window).on("load", function() {
   $('.spoverlay').hide();
   $('.faq').hide();
   $('.caption').hide();
-  $('.compvideo').hide();
   $('.codesnippet').hide();
   $('.anotherqanda').hide();
+  $('.client').hide();
   //declaring instances
   const a2Maker = new panelAndDefaults();
   const a3Maker = new panelAndDefaults();
@@ -24,124 +24,143 @@ $(window).on("load", function() {
   const a5Maker = new panelAndDefaults();
   const secEditor = new sectionMan();
   const dropdownManipulator = new dropdownMan('.B3', ['.B3 .middle .title', '.B3 .middle .infofromsides']);
-  a2Maker.newPanel("T A X", "Programming serves as a key part of the FTC competition, making our robot move based on the controller and also sensors. Our four programmers help develop Java code for Autonomous and TeleOp, bringing us up on top. We practice together, discussing issues and testing prototypes of our programs. In the end, we aim to build a great program to perform our best.", ".A2", ".leftside");
-
   //all the configs
   let currentBio = 0;
   $('.A2 .rightside .images .imgtopleft').click(function() {
     currentBio = 0;
-    a2Maker.newPanel("b e n e f i t s", "The Captain of the Programming Division, Joshua oversees the creation of the autonomous and tele-op programs. He also made various side programs, including one for presentations and another that can play music. Joshua enjoys programming games, playing chess, and spending time with friends and family.", ".A2", ".leftside");
+    a2Maker.newPanel("b e n e f i t s", "Accuracy Accounting offers personalized and professional help to our clients who need help with taxes. Our firm will help individuals and businesses to:<br>- Identify and reduce tax risks.<br>- Utilize tax strategies that complement the client.<br>- Prepare the required forms and make sure to record all calculations accurately.<br>- Review and verify that tax filings have been completed and submitted correctly.<br>- Certify that your financial reporting practices are within current IRS regulations.", ".A2", ".leftside");
   });
   $('.A2 .rightside .images .imgbottomleft').click(function() {
-    a2Maker.newPanel("o u r \xa0\xa0p r o c e s s", "As a Team Lawyer, Eric, aka h0dL - 3 - Jumpman - Ankle Bully, who's in 8th grade, understands the rulebook front to back, in addition to programming the encoder-based autonomous program on the Crater Side. He enjoys programming, playing basketball, and Bitcoin.", ".A2", ".leftside");
+    a2Maker.newPanel("o u r \xa0\xa0p r o c e s s", "There are also different types of taxes depending on various business activities, like selling taxable products or services, using equipment, owning business property, and being self-employed. These are just some of the tax services we provide:<br>- Income Tax: All businesses must pay tax on their income; that is, the business must pay tax on the profit of the company.<br>- Sales Tax: Merchants in most states are required to collect sales tax and pay it to the state department of revenue.<br>- Property Tax: Businesses that own real property, like a building, must pay property tax to the local taxing authority.", ".A2", ".leftside");
   });
   $('.A2 .rightside .images .imgbottommiddle').click(function() {
     currentBio = 0;
-    a2Maker.newPanel("t a x", "Programming serves as a key part of the FTC competition, making our robot move based on the controller and also sensors. Our four programmers help develop Java code for Autonomous and TeleOp, bringing us up on top. We practice together, discussing issues and testing prototypes of our programs. In the end, we aim to build a great program to perform our best.", ".A2", ".leftside");
+    a2Maker.newPanel("t a x", "Taxes are a mandatory financial charge levied upon an individual or corporation by the state or federal government. These funds are then deposited towards public expenses. Often times, filing for taxes are complicated and tedious, so this is where we step in!", ".A2", ".leftside");
   });
 
   $('.A3 .leftside .images .imgbottomleft').click(function() {
-    a3Maker.newPanel("b e n e f i t s", "Kawin stands as the Robot Captain, overlooking the robot from start to end. He is a key builder for our robot, starting from assembling the chassis to last-minute fixes. Other than that, Kawin works on the Promote video and helps out other team members with mechanical issues. At school, Kawin is part of the marching band; at home, he watches anime.", ".A3", ".rightside");
+    a3Maker.newPanel("b e n e f i t s", "Bookkeeping will provide large benefits for your business because organized financial records and balanced finances are central to your success. Our services will make sure that:<br>- The process is done accurately and completely.<br>- We will use a bookkeeping system that accommodates your business.<br>- We will manage the transactions brought in through your accounting system’s bank feed.", ".A3", ".rightside");
   });
   $('.A3 .leftside .images .imgbottommiddle').click(function() {
-    a3Maker.newPanel("o u r \xa0\xa0p r o c e s s", "Without a robot, we would never win a competition. Where other category members can’t fill in, we have Building members swoop in to build the robot. Through all the work and dedication, the 5 main builders have constructed the base, scoring mechanism, intake system, protection safeties, and wiring setups. Just to name a few, they use power tools, brackets, channels, zip ties, a variety of nuts and bolts, hammers, and plexiglass to construct the robot. ", ".A3", ".rightside");
+    a3Maker.newPanel("o u r \xa0\xa0p r o c e s s", "The complexity of the bookkeeping process depends on the size of your business and the number of transactions conducted. Nowadays, the process is heavily automated. There are two methods of bookkeeping which we both provide:<br>- Single-entry: A single entry system records each accounting transaction with a single entry to the accounting records.<br>- Double-entry: Every entry to an account requires a corresponding and opposite entry to a different account.", ".A3", ".rightside");
   });
   $('.A3 .leftside .images .imgtopleft').click(function() {
-    a3Maker.newPanel("b o o k k e e p i n g", "Glory, Electrician Captain, helps with organizing the wires and wiring the robot. With the use of zip ties, she prevents the wires from turning into a spaghetti like mess and interfering with the robot’s mechanisms. She is also a scouter and keeps track of game points during practice runs and meets. She is a neat freak who enjoys reading and talking to plants.", ".A3", ".rightside");
+    a3Maker.newPanel("b o o k k e e p i n g", "Bookkeeping services allow a company to develop and maintain their financial processes and management. The basic duties of a bookkeeper are to keep all of a business’s financial transactions documented. They can also handle a company’s payroll, deposits, and create monthly financial reports. Illustration credit: <a href='https://www.vecteezy.com/' style='text-decoration: underline!important;'>vecteezy.com</a>", ".A3", ".rightside");
   });
 
   $('.A4 .rightside .images .imgbottomleft').click(function() {
-    a4Maker.newPanel("o u r \xa0\xa0p r o c e s s", "Sarah controls the Engineering Notebook, an important part of the . It keeps all the documents of our team, even what we have as snacks for each practice. Sarah also meets with businesses in person, asking for a funding to keep our team going. Sarah loves to listen to music, watch the newest movies, and hang out with friends.", ".A4", ".leftside");
+    a4Maker.newPanel("o u r \xa0\xa0p r o c e s s", "Financial services is a very broad sector, so it can be divided up into several subparts:<br>- Accounting: Their main job is to record and maintain financial records.<br>- Insurance: Helps businesses reduce the potential chance of financial loss.<br>- Retail/Commercial Banking: These banks do personal and business banking together. They can open savings accounts, accept deposits, lend money, issue credit/debit cards, foreign currency exchanges, and a multitude of other basic services.", ".A4", ".leftside");
   });
   $('.A4 .rightside .images .imgbottommiddle').click(function() {
-    a4Maker.newPanel("f i n a n c i a l", "Although it may not seem like it, Business members are vital to having a functional team. Business controls our external relationships with businesses, experts and outreach events, while also doing documentation and scouting for competition. They find places to spread the world of STEM, attract sponsors to support our team, invite experts over to give us tips, manage the Engineering Notebook, and get information about who could benefit us as an Alliance. Business members always try to keep track of our programming and building progress as well, so we can accurately recollect of what we have done. They fill the Engineering Notebook with great details about our team’s accomplishments and hope to inspire kids to do as great.", ".A4", ".leftside");
+    a4Maker.newPanel("f i n a n c i a l", "Accuracy Accounting advises on key issues such as the impact of risk and regulation, financial crime, innovations in mobile as well as digital technologies. The industry as a whole is vast and includes companies engaged in activities such as investing, lending, insuring, asset management, advising, accounting, and much more!", ".A4", ".leftside");
   });
   $('.A4 .rightside .images .imgtopleft').click(function() {
-    a4Maker.newPanel("b e n e f i t s", "Jason works on the Engineering Section for our team, drives the robot during the competition, and helps build and maintain the robot. In the Engineering Section, Jason includes the robot’s mechanisms and functionalities. When he’s not doing robotics, he plays games, dragonboats, and practices the handbell.", ".A4", ".leftside");
+    a4Maker.newPanel("b e n e f i t s", "We effectively working with clients as they shape their businesses and execute their strategies. We will:<br>- Use proven methodologies to design and execute business transformation.<br>- Bring the most value to our clients.<br>- Provide greater efficiency and productivity. ", ".A4", ".leftside");
   });
 
   $('.A5 .botside .images .imgfarleft').click(function() {
-    a5Maker.newPanel("a p p o i n t m e n t s", "As Wolf Corp., our goal is to inspire other kids to work as a team and get involved in STEM education. The robot isn’t the only part of the competition, and we never aim to just get first place in the competition. Truly impacting the community and people around us to be excited about robotics and STEM is what we aspire to do. Instead of just focusing on our team, we aim to influence brilliant teenagers and kids to improve the world.", ".A5", ".topside");
+    a5Maker.newPanel("a p p o i n t m e n t s", "Appointments will be approximately two hours long, and booking one is completely free! Just go to the Appointment area of our website and fill in the form!", ".A5", ".topside");
   });
   $('.A5 .botside .images .imgkindaleft').click(function() {
-    a5Maker.newPanel("l e v e l \xa0\xa01", "At Walnut High School, we were able to set up the first robotics club to encourage our school to learn more about STEM and robotics. We inspired two teachers, Ms. Lindemann and Mr. Madrid, to help support our cause and become our advisors. Mr. Madrid helps out on the advisor-required meetings and has useful tips for running the club. We have meetups every other Tuesday during lunch at Ms. Lindemann’s classroom, to discuss our robot and teach them some new information. Students can come anytime during the season and is open to everyone. Our club has successfully connected Walnut High to FIRST.", ".A5", ".topside");
+    a5Maker.newPanel("l e v e l \xa0\xa01", "The first level is if your business makes less than $100,000 in revenue a year. We charge $2,500 for every category of services in addition to 2% of your revenue.", ".A5", ".topside");
   });
   $('.A5 .botside .images .imgkindaright').click(function() {
-    a5Maker.newPanel("l e v e l \xa0\xa02", "Our team has connected to more than 20 STEM experts for knowledge. For example, we visited Walnut Valley Robotics to learn about electrical power tools. We met with Dr. Spiros, the Manager of Outreach at CalTech. He reviewed our outreaches and encouraged us to do more. Also, Mr. Jacob, a JPL robotics engineer helped us with our scoring mechanism issue and suggested we have a pre-check and post-check for our robot before and after a match. We went to the “Crush Master and Grinding Company” who gave us a tour and introduced us to CNC and WATER JET machines which they later used to cut multiple pieces for our robot. Experts are always a big help to us, and are a great part of the community.", ".A5", ".topside");
+    a5Maker.newPanel("l e v e l \xa0\xa02", "The second level is if your business makes less than $1,000,000 in revenue a year. We charge $5,500 for every category of services in addition to 5% of your revenue.", ".A5", ".topside");
   });
   $('.A5 .botside .images .imgfarright').click(function() {
-    a5Maker.newPanel("l e v e l \xa0\xa03", "From helping other teams to holding workshops, we also encourage other teams to do their best. Our team mentored multiple FLL teams such as HEXA Challengers who are advancing to the World Festival this year. At the beginning of the season, we hosted 2 programming workshops for 12 new coaches at Suzanne Middle school. Every summer, we host a robotics workshop at the walnut library where we teach kids how to build and program robots. We also held 2 workshops for new FTC teams and volunteered at 3 FLL and 2 FTC tournaments.", ".A5", ".topside");
+    a5Maker.newPanel("l e v e l \xa0\xa03", "The third level is if your business makes more than or equal to $1,000,000 in revenue a year. We charge $7,500 for every category of services in addition to 9% of your revenue.", ".A5", ".topside");
   });
 
   //b1andb2
-
+  let notSelected = true;
   $('.B1 .sections .topleft button').click(function() {
+    notSelected = false;
     secEditor.hideAllSecExceptAndEnlarge('.topleft', '.B1');
-    setTimeout(function(){$('.compvideo').fadeIn();}, 300);
   });
   $('.B1 .sections .topleft').mouseenter(() => {
-    $('.B1 .sections .topleft').addClass('halfgone');
+    if (notSelected) {
+      $('.B1 .sections .topleft').addClass('halfgone');
+    }
   }).mouseleave(() => {
     $('.B1 .sections .topleft').removeClass('halfgone');
   });
   $('.B1 .sections .topright button').click(function() {
+    notSelected = false;
     secEditor.hideAllSecExceptAndEnlarge('.topright', '.B1');
   });
   $('.B1 .sections .topright').mouseenter(() => {
-    $('.B1 .sections .topright').addClass('halfgone');
+    if (notSelected) {
+      $('.B1 .sections .topright').addClass('halfgone');
+    }
   }).mouseleave(() => {
     $('.B1 .sections .topright').removeClass('halfgone');
   });
   $('.B1 .sections .botleft button').click(function() {
+    notSelected = false;
     secEditor.hideAllSecExceptAndEnlarge('.botleft', '.B1');
   });
   $('.B1 .sections .botleft').mouseenter(() => {
-    $('.B1 .sections .botleft').addClass('halfgone');
+    if (notSelected) {
+      $('.B1 .sections .botleft').addClass('halfgone');
+    }
   }).mouseleave(() => {
     $('.B1 .sections .botleft').removeClass('halfgone');
   });
   $('.B1 .sections .botright button').click(function() {
+    notSelected = false;
     secEditor.hideAllSecExceptAndEnlarge('.botright', '.B1');
   });
   $('.B1 .sections .botright').mouseenter(() => {
-    $('.B1 .sections .botright').addClass('halfgone');
+    if (notSelected) {
+      $('.B1 .sections .botright').addClass('halfgone');
+    }
   }).mouseleave(() => {
     $('.B1 .sections .botright').removeClass('halfgone');
   });
   $('.B1 .sections .closeSec').click(function() {
+    notSelected = true;
     $('.B1 .sections .closeSec').fadeOut(250);
     secEditor.showAllSec('.B1');
-    $('.compvideo')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-    $('.compvideo').hide();
   });
 
   $('.B2 .sections .topleft button').click(function() {
+    notSelected = false;
     secEditor.hideAllSecExceptAndEnlarge('.topleft', '.B2');
   });
   $('.B2 .sections .topleft').mouseenter(() => {
-    $('.B2 .sections .topleft').addClass('halfgone');
+    if (notSelected) {
+      $('.B2 .sections .topleft').addClass('halfgone');
+    }
   }).mouseleave(() => {
     $('.B2 .sections .topleft').removeClass('halfgone');
   });
   $('.B2 .sections .topright button').click(function() {
+    notSelected = false;
     secEditor.hideAllSecExceptAndEnlarge('.topright', '.B2');
   });
   $('.B2 .sections .topright').mouseenter(() => {
-    $('.B2 .sections .topright').addClass('halfgone');
+    if (notSelected) {
+      $('.B2 .sections .topright').addClass('halfgone');
+    }
   }).mouseleave(() => {
     $('.B2 .sections .topright').removeClass('halfgone');
   });
   $('.B2 .sections .botleft button').click(function() {
+    notSelected = false;
+    $('.client').show();
     secEditor.hideAllSecExceptAndEnlarge('.botleft', '.B2');
   });
   $('.B2 .sections .botleft').mouseenter(() => {
-    $('.B2 .sections .botleft').addClass('halfgone');
+    if (notSelected) {
+      $('.B2 .sections .botleft').addClass('halfgone');
+    }
   }).mouseleave(() => {
     $('.B2 .sections .botleft').removeClass('halfgone');
   });
   let botRightNotClicked = true;
   let running = false;
   $('.B2 .sections .botright button').click(function() {
+    notSelected = false;
     secEditor.hideAllSecExceptAndEnlarge('.botright', '.B2');
     if (botRightNotClicked) {
         running = true;
@@ -151,12 +170,15 @@ $(window).on("load", function() {
     }
   });
   $('.B2 .sections .botright').mouseenter(() => {
-    $('.B2 .sections .botright').addClass('halfgone');
+    if (notSelected) {
+      $('.B2 .sections .botright').addClass('halfgone');
+    }
   }).mouseleave(() => {
     $('.B2 .sections .botright').removeClass('halfgone');
   });
   $('.B2 .sections .closeSec').click(function() {
     running = false;
+    $('.client').hide();
     $('.B2 .sections .closeSec').fadeOut(250);
     secEditor.showAllSec('.B2');
     $('.codesnippet').hide();
@@ -241,7 +263,7 @@ $(window).on("load", function() {
       dropdownrightopen = true;
     }
   });
-  dropdownManipulator.handleChoice(1, '.left', 'Advisory Financial Services Director', 'As a Director, you’ll work as part of a team of problem solvers with extensive consulting and industry experience, helping our clients solve their complex business issues from strategy to execution.<br><br>Requirements:<br>Bachelor Degree, 10 Years of Experience<br><br>Preferred Skills:<br>- Thorough experience identifying and addressing client needs: developing and sustaining deep client relationships using networking, negotiation and persuasion skills to identify and sell potential new service opportunities; preparing and presenting complex written and verbal materials; and defining resource requirements, project workflow, budgets, billing and collection.<br> - Thorough experience as a team leader: leading teams to generate a vision, establish direction and motivate members, create an atmosphere of trust, leverage diverse views, coach staff, and encourage improvement and innovation.');
+  dropdownManipulator.handleChoice(1, '.left', 'Advisory Financial Services Director', "Accuracy Accounting offers personalized and professional help to our clients who need help with taxes. Our firm will help individuals and businesses to:<br>Identify and reduce tax risks.<br>Utilize tax strategies that complement the client.<br>Prepare the required forms and make sure to record all calculations accurately.<br>Review and verify that tax filings have been completed and submitted correctly.<br>Certify that your financial reporting practices are within current IRS regulations.");
   dropdownManipulator.handleChoice(2, '.left', 'International Tax Director', 'As a Director, you’ll work as part of a team of problem solvers with extensive consulting and industry experience, helping our clients solve their complex business issues from strategy to execution.<br><br>Requirements:<br>Bachelor Degree in Accounting, 8 Years of Experience, CPA, Enrolled Agent, or Member of the Bar<br><br>Preferred Skills:<br>Extensive knowledge of assisting companies to understand and assess the tax impact of company business, operations and transactions in multiple jurisdictions. Extensive technical skills in structural realignment, cash and financial statement effective tax rate analysis and improvement of tax efficiencies of cross-border flows. Thorough experience identifying and addressing client needs. Thorough experience as a team leader: leading teams to generate a vision, establish direction and motivate members, create an atmosphere of trust, leverage diverse views, coach staff, and encourage improvement and innovation.');
   dropdownManipulator.handleChoice(1, '.right', 'Tax Innovation Reporting and Strategy Associate', 'As a Senior Associate, you’ll work as part of a team of problem solvers with extensive consulting and industry experience, helping our clients solve their complex business issues from strategy to execution.<br><br>Requirements:<br>Bachelor Degree, Accounting, Business Administration/Management, Economics, Finance and Technology, 2 years of experience, and certification in one of the following: CPA, EA, Admission to the Bar<br><br>Preferred Skills:<br>Demonstrates a thorough understanding of ERP-based solutions to contribute as a key team member in consulting, designing, implementing and supporting those solutions as demonstrated by the successful management of enterprise application architecture, selection, implementation and optimization projects. Demonstrates proven thorough abilities and success utilizing ERP-based solutions.');
   dropdownManipulator.handleChoice(2, '.right', 'Financial Consulting Senior Associate', 'As a Senior Associate, you’ll work as part of a team of problem solvers with extensive consulting and industry experience, helping our clients solve their complex business issues from strategy to execution.<br><br>Requirements:<br>MBA<br><br>Preferred Skills:<br>- Demonstrates proven thorough knowledge with the design of operational metrics to support strategic plans, dashboard design and benchmarking/standard industry practices. - Demonstrates the ability to write and deliver proposals to prospective clients. - Demonstrates experience as a team leader: creating a positive environment by monitoring workloads of the team while meeting client expectations and respecting the work-life quality of team members; providing candid, meaningful feedback in a timely manner; and keeping leadership informed of progress and issues. ');
@@ -415,8 +437,8 @@ class panelAndDefaults {
     this.titleString = '';
     this.textOptions = {
       strings: [" ", this.textString],
-      typeSpeed: 5,
-      backSpeed: 0.1,
+      typeSpeed: -100,
+      backSpeed: -100,
       showCursor: false,
       onComplete: (self) => {
         this.picChose1 = false;
@@ -424,8 +446,8 @@ class panelAndDefaults {
     };
     this.titleOptions = {
       strings: [" ", this.titleString],
-      typeSpeed: 30,
-      backSpeed: 15,
+      typeSpeed: -3,
+      backSpeed: -3,
       showCursor: false,
       onComplete: (self) => {
         this.picChose = false;
@@ -511,21 +533,21 @@ class dropdownMan {
     this.panel = panel;
     this.outputarea = outputarea;
     this.titleOptions = {
-      strings: [" ", ""],
-      typeSpeed: 30,
-      backSpeed: 15,
+      strings: [" ", this.titleString],
+      typeSpeed: -100,
+      backSpeed: -100,
       showCursor: false,
       onComplete: (self) => {
-        this.optionSelected = false;
+        this.picChose = false;
       }
     };
     this.textOptions = {
-      strings: [" ", ""],
-      typeSpeed: 5,
-      backSpeed: 0.1,
+      strings: [" ", this.textString],
+      typeSpeed: -3,
+      backSpeed: -3,
       showCursor: false,
       onComplete: (self) => {
-        this.optionSelected1 = false;
+        this.picChose1 = false;
       }
     };
     this.titleTyped;

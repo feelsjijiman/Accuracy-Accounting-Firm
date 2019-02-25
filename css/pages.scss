@@ -42,6 +42,19 @@ body.user-is-tabbing *:focus {
     }
   }
 }
+.A, .B, .B3 {
+  .sources {
+    position: absolute;
+    bottom: 5vh;
+    font-size: 18px;
+    color: white;
+    font-family: 'Abel';
+
+    a {
+      text-decoration: underline!important;
+    }
+  }
+}
 .A1 {
   display: flex;
   justify-content: right;
@@ -386,7 +399,7 @@ body.user-is-tabbing *:focus {
 }
 .halfgone {
   &::after {
-    opacity: 0.6!important;
+    opacity: 0.6;
   }
 }
 //                          //
@@ -502,7 +515,7 @@ body.user-is-tabbing *:focus {
     .topleft {
       &::after {
         content: "";
-        background: url('../images/customer.png');
+        background: url('../images/barrett.png');
         top: 0;
         left: 0;
         bottom: 0;
@@ -515,7 +528,7 @@ body.user-is-tabbing *:focus {
     .topright {
       &::after {
         content: "";
-        background: url('../images/customer.png');
+        background: url('../images/andrews.png');
         top: 0;
         left: 0;
         bottom: 0;
@@ -528,7 +541,7 @@ body.user-is-tabbing *:focus {
     .botleft {
       &::after {
         content: "";
-        background: url('../images/customer.png');
+        background: url('../images/marshall.png');
         top: 0;
         left: 0;
         bottom: 0;
@@ -541,7 +554,7 @@ body.user-is-tabbing *:focus {
     .botright {
       &::after {
         content: "";
-        background: url('../images/customer.png');
+        background: url('../images/ma.png');
         top: 0;
         left: 0;
         bottom: 0;
@@ -645,11 +658,23 @@ body.user-is-tabbing *:focus {
         text-align: justify;
       }
       .boxtitle {
+        text-align: center;
         margin-bottom: 5vh;
         color: white;
         font-family: 'Titillium Web';
         font-size: 30px;
         opacity: 0;
+        width: 60vw;
+        line-height: 3vh;
+
+        span {
+          font-size: 15px;
+          color: white !important;
+
+          a {
+            text-decoration: underline!important;
+          }
+        }
       }
       .compvideo {
         margin: 5vh 0 0 0;
@@ -704,6 +729,18 @@ body.user-is-tabbing *:focus {
       @include fourSectionPos(topright, $sameVertMargin, $sameHorizMargin);
     }
     .botleft {
+      .clientslogo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .client {
+          width: 25vh;
+          height: 25vh;
+        }
+      }
+
       &::after {
         content: "";
         background: url('../images/customer.png');
@@ -910,7 +947,10 @@ body.user-is-tabbing *:focus {
         @include intervalAnimationDelay(4);
       }
     }
-
+  }
+  .sources {
+    max-width: 20vw;
+    left: 10vw;
   }
 }
 .C {
@@ -1099,6 +1139,14 @@ body.user-is-tabbing *:focus {
     font-size: 18px;
     text-align: center;
     line-height: 3vh;
+
+    span {
+      font-size: 14px;
+
+      a {
+        text-decoration: underline!important;
+      }
+    }
   }
   .socials {
     display: flex;
@@ -1661,6 +1709,11 @@ body.user-is-tabbing *:focus {
       font-size: 17px!important;
     }
   }
+  .A, .B, .B3 {
+    .sources {
+      font-size: 14px;
+    }
+  }
   .maintext {
     margin: 1.5vh!important;
     font-size: 9px!important;
@@ -1697,7 +1750,7 @@ body.user-is-tabbing *:focus {
       font-size: 14px!important;
     }
     .sections {
-      .topleft, .topright, .topmid, .botmid, .botleft, .botright {
+      .topleft, .topright, .botleft, .botright {
         .infolabel {
           font-size: 9px!important;
         }
@@ -1706,9 +1759,19 @@ body.user-is-tabbing *:focus {
         }
         .boxtitle {
           font-size: 11px!important;
+
+          span {
+            font-size: 8px!important;
+          }
         }
         button {
           font-size: 11px!important;
+        }
+      }
+      .botleft {
+        .client {
+          width: 26vw !important;
+          height: 26vw !important;
         }
       }
     }
@@ -1783,6 +1846,10 @@ body.user-is-tabbing *:focus {
     }
     .contactinfo {
       font-size: 14px;
+
+      span {
+        font-size: 11px;
+      }
     }
   }
   .E {
