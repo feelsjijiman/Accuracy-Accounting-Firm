@@ -1,6 +1,8 @@
 import { hideSponsors } from './maintest.js';
 
 $(window).on("load", function() {
+  let el = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
+  el.parentNode.removeChild(el);
   window.addEventListener( 'touchmove', function(e) {
     e.preventDefault();
   }, {passive: false});
