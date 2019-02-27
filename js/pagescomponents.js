@@ -3,7 +3,7 @@ import { hideSponsors } from './maintest.js';
 $(window).on("load", function() {
   try {
     let el = document.querySelector('[alt="www.000webhost.com"]').parentNode.parentNode;
-    el.parentNode.removeChild(el);  
+    el.parentNode.removeChild(el);
   } catch {
     console.log("no trademark!")
   }
@@ -57,11 +57,11 @@ $(window).on("load", function() {
   $('.A4 .rightside .images .imgbottomleft').click(function() {
     a4Maker.newPanel("o u r \xa0\xa0p r o c e s s", "Financial services is a very broad sector, so it can be divided up into several subparts:<br>- Accounting: Their main job is to record and maintain financial records.<br>- Insurance: Helps businesses reduce the potential chance of financial loss.<br>- Retail/Commercial Banking: These banks do personal and business banking together. They can open savings accounts, accept deposits, lend money, issue credit/debit cards, foreign currency exchanges, and a multitude of other basic services.", ".A4", ".leftside");
   });
-  $('.A4 .rightside .images .imgbottommiddle').click(function() {
+  $('.A4 .rightside .images .imgtopleft').click(function() {
     a4Maker.newPanel("f i n a n c i a l", "Accuracy Accounting advises on key issues such as the impact of risk and regulation, financial crime, innovations in mobile as well as digital technologies. The industry as a whole is vast and includes companies engaged in activities such as investing, lending, insuring, asset management, advising, accounting, and much more!", ".A4", ".leftside");
   });
-  $('.A4 .rightside .images .imgtopleft').click(function() {
-    a4Maker.newPanel("b e n e f i t s", "We effectively working with clients as they shape their businesses and execute their strategies. We will:<br>- Use proven methodologies to design and execute business transformation.<br>- Bring the most value to our clients.<br>- Provide greater efficiency and productivity. ", ".A4", ".leftside");
+  $('.A4 .rightside .images .imgbottommiddle').click(function() {
+    a4Maker.newPanel("b e n e f i t s", "We effectively working with clients as they shape their businesses and execute their strategies. We will:<br>- Use proven methodologies to design and execute business transformation.<br>- Bring the most value to our clients.<br>- Provide greater efficiency and productivity.", ".A4", ".leftside");
   });
 
   $('.A5 .botside .images .imgfarleft').click(function() {
