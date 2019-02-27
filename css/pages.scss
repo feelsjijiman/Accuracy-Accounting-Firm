@@ -1102,6 +1102,8 @@ body.user-is-tabbing *:focus {
       }
     }
     .doneseeing {
+      position: absolute;
+      bottom: 0;
       margin: 5vh 0 5vh 0;
       width: 30px;
       height: 30px;
@@ -1256,6 +1258,9 @@ body.user-is-tabbing *:focus {
     margin-bottom: 0;
   }
   .talk {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5vh;
     filter: invert(1);
     cursor: pointer;
     z-index: 1000;
@@ -1812,7 +1817,7 @@ body.user-is-tabbing *:focus {
         font-size: 14px!important;
       }
       .infofromsides {
-        font-size: 9px!important;
+        font-size: 7px!important;
       }
     }
     .left, .right {
