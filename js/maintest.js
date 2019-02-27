@@ -2,18 +2,10 @@ $('.back').hide();
 $('.forward').hide();
 $('.up').hide();
 // During the page load, we use this filler
-var loading_screen = pleaseWait({
-  logo: "css/images/accuracy-logo.png",
-  backgroundColor: 'lightgrey',
-  loadingHtml: "<div class='spinner'><div class='double-bounce1'></div><div class='double-bounce2'></div></div>"
-});
 var currslide = 0;
 var navOpen = false;
 
 $(window).on("load", function() {
-
-  // removes loading screen
-  loading_screen.finish();
 
   $('.menu-open').show();
   //homejs stuff
@@ -22,7 +14,7 @@ $(window).on("load", function() {
   console.log(loadTime);
 
   ScrollReveal().reveal('.motto', {
-    delay: 4500,
+    delay: loadTime + 1000,
     duration: 800,
     interval: 150,
     easing: 'ease-out',
