@@ -162,7 +162,7 @@ body.user-is-tabbing *:focus {
 .A3 {
   display: flex;
   justify-content: right;
-  @include layer(white, white, 7);
+  @include layer(#006789, #006789, 7);
   .rightside {
     display: flex;
     flex-direction: column;

@@ -23,6 +23,7 @@ $(window).on("load", function() {
   $('.codesnippet').hide();
   $('.anotherqanda').hide();
   $('.client').hide();
+  $('.A2, .A3, .A4, .A5, .B1, .B2, .B3').hide();
   //declaring instances
   const a2Maker = new panelAndDefaults();
   const a3Maker = new panelAndDefaults();

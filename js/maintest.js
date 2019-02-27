@@ -14,7 +14,7 @@ $(window).on("load", function() {
   console.log(loadTime);
 
   ScrollReveal().reveal('.motto', {
-    delay: loadTime + 1000,
+    delay: loadTime+500,
     duration: 800,
     interval: 150,
     easing: 'ease-out',
