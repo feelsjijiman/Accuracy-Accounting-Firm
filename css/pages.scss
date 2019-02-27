@@ -1601,6 +1601,10 @@ body.user-is-tabbing *:focus {
         font-size: 11px!important;
       }
     }
+    .sources {
+      font-size: 14px!important;
+      left: 5vw!important;
+    }
   }
   .C {
     .stories {
@@ -1713,7 +1717,15 @@ body.user-is-tabbing *:focus {
   }
 }
 /* Small devices (portrait phones, < 420) */
-@media (max-width: 420px) {
+@media (max-width: 430px) {
+  .navcover {
+    h1 {
+      font-size: 13px;
+    }
+    p {
+      font-size: 10px;
+    }
+  }
   .viz {
     .selecttitle {
       font-size: 15px;
@@ -1817,6 +1829,10 @@ body.user-is-tabbing *:focus {
         width: 12px!important;
         height: 12px!important;
       }
+    }
+    .sources {
+      font-size: 11px!important;
+      left: 5vw!important;
     }
   }
   .C {
