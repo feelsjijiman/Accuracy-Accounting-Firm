@@ -22,7 +22,7 @@ $(window).on("load", function() {
   console.log(loadTime);
 
   ScrollReveal().reveal('.motto', {
-    delay: loadTime,
+    delay: 4500,
     duration: 800,
     interval: 150,
     easing: 'ease-out',
@@ -37,7 +37,7 @@ $(window).on("load", function() {
     delay: 1000
   });
   ScrollReveal().reveal('.iconArea', {
-    delay: loadTime + 7000
+    delay: loadTime
   });
 
   //for landing

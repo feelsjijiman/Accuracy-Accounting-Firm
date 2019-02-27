@@ -1002,7 +1002,7 @@ body.user-is-tabbing *:focus {
         padding: 2vw;
         background-color: #1d92e7;
         text-align: center;
-        font-size: 11px;
+        font-size: 9px;
         letter-spacing: 3px;
         text-transform: uppercase;
         font-family: 'Hansief';
@@ -1548,6 +1548,15 @@ body.user-is-tabbing *:focus {
       }
     }
   }
+  .E {
+    .faq {
+      .anotherqanda, .qanda {
+        .question, .answer {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 /* Medium devices (tablets, 576-768) */
 @media (max-width: 769px) {
@@ -1633,6 +1642,15 @@ body.user-is-tabbing *:focus {
     .contactForm {
       input, textarea {
         border-radius: 5px!important;
+      }
+    }
+  }
+  .E {
+    .faq {
+      .anotherqanda, .qanda {
+        .question, .answer {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -1870,6 +1888,22 @@ body.user-is-tabbing *:focus {
             font-size: 9.25px!important;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .navcover {
+    h1 {
+      font-size: 11px;
+    }
+    p {
+      font-size: 8px;
+    }
+  }
+  .viz {
+    .selecttitle {
+      font-size: 11px;
     }
   }
 }
