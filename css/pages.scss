@@ -980,7 +980,7 @@ body.user-is-tabbing *:focus {
       position: relative;
       margin: 2vw;
       width: 15vw;
-      height: 26vw;
+      height: 30vw;
       border: 5px solid white;
       cursor: pointer;
       transition-delay: .25s !important;
@@ -998,7 +998,7 @@ body.user-is-tabbing *:focus {
         top: 0;
         left: 0;
         width: 11vw;
-        height: 22vw;
+        height: 26vw;
         padding: 2vw;
         background-color: #1d92e7;
         text-align: center;
@@ -1064,7 +1064,7 @@ body.user-is-tabbing *:focus {
         position: relative;
         margin: 2vw;
         width: 15vw;
-        height: 26vw;
+        height: 30vw;
         border: 5px solid white;
         cursor: pointer;
         transition-delay: .25s !important;
@@ -1081,11 +1081,11 @@ body.user-is-tabbing *:focus {
           top: 0;
           left: 0;
           width: 11vw;
-          height: 22vw;
+          height: 26vw;
           padding: 2vw;
           background-color: #1d92e7;
           text-align: center;
-          font-size: 11px;
+          font-size: 9px;
           letter-spacing: 3px;
           text-transform: uppercase;
           font-family: 'Hansief';
@@ -1411,8 +1411,11 @@ body.user-is-tabbing *:focus {
     cursor: pointer;
     transition: .5s;
     z-index: 6;
+    @include flashborder;
+    animation: flashborder 2s linear infinite;
 
     &:hover {
+      animation-play-state: paused;
       box-shadow: 0 5px 8px 0 rgba(0,0,0,0.24), 0 10px 25px 0 rgba(0,0,0,0.19);
       color: #005a9b;
     }
@@ -1666,6 +1669,11 @@ body.user-is-tabbing *:focus {
 }
 /* Small devices (landscape phones, 420-576) */
 @media (max-width: 576px) {
+  .subdiv3 {
+    p {
+      padding: 15vh 15vw 15vh 15vw;
+    }
+  }
   .viz {
     .selecttitle {
       font-size: 20px;
@@ -1764,6 +1772,8 @@ body.user-is-tabbing *:focus {
     }
     .sections {
       .topleft, .topright, .botleft, .botright {
+        width: 35vw;
+
         .infolabel {
           font-size: 9px!important;
         }
@@ -1777,6 +1787,12 @@ body.user-is-tabbing *:focus {
           font-size: 11px!important;
         }
       }
+      .topleft, .botleft {
+        margin-left: 12vw;
+      }
+      .topright, .botright {
+        margin-right: 12vw;
+      }
     }
   }
   .B2 {
@@ -1786,6 +1802,8 @@ body.user-is-tabbing *:focus {
     }
     .sections {
       .topleft, .topright, .botleft, .botright {
+        width: 35vw;
+
         .infolabel {
           font-size: 9px!important;
         }
@@ -1808,6 +1826,12 @@ body.user-is-tabbing *:focus {
           width: 26vw !important;
           height: 26vw !important;
         }
+      }
+      .topleft, .botleft {
+        margin-left: 12vw;
+      }
+      .topright, .botright {
+        margin-right: 12vw;
       }
     }
   }

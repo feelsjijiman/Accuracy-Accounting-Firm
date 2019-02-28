@@ -66,7 +66,7 @@ $(window).on("load", function() {
   });
 
   $('.A5 .botside .images .imgfarleft').click(function() {
-    a5Maker.newPanel("a p p o i n t m e n t s", "Appointments will be approximately two hours long, and booking one is completely free! Just go to the Appointment area of our website and fill in the form!", ".A5", ".topside");
+    a5Maker.newPanel("a p p o i n t m e n t s", "Appointments will be approximately two hours long and booking one is completely free! Just go to the Appointment area of our website and fill in the form!", ".A5", ".topside");
   });
   $('.A5 .botside .images .imgkindaleft').click(function() {
     a5Maker.newPanel("l e v e l \xa0\xa01", "The first level is if your business makes less than $100,000 in revenue a year. We charge $2,500 for every category of services in addition to 2% of your revenue.", ".A5", ".topside");
@@ -337,6 +337,9 @@ $(window).on("load", function() {
     $('.seemore').addClass('fadeOut');
     $('.morestories').show();
     $('.up').hide();
+    setTimeout(() => {
+      $('.C .morestories .morestorieslist .story .awoverlay').show();
+    }, 800);
   });
 
   $('.doneseeing').click(function() {
@@ -348,53 +351,8 @@ $(window).on("load", function() {
     $('.up').show();
   });
 
-  $('.morestorieslist').children('.story').each(function () {
-    $(this).hover(function(event) {
-      $(this).children('.awoverlay').removeClass('fadeOutDownBigSlow');
-      $(this).children('.awoverlay').addClass('fadeInUp');
-      $(this).children('.awoverlay').show();
-    }, function(event) {
-      $(this).children('.awoverlay').removeClass('fadeInUp');
-      $(this).children('.awoverlay').addClass('fadeOutDownBigSlow');
-    });
-  });
-
-  $('.stories').children('.story').each(function () {
-    $(this).hover(function(event) {
-      $(this).children('.awoverlay').removeClass('fadeOutDownBigSlow');
-      $(this).children('.awoverlay').addClass('fadeInUp');
-      $(this).children('.awoverlay').show();
-    }, function(event) {
-      $(this).children('.awoverlay').removeClass('fadeInUp');
-      $(this).children('.awoverlay').addClass('fadeOutDownBigSlow');
-    });
-  });
-
   // sponsors page
   let moreSponOpen = false;
-  let arconic = false;
-
-  setTimeout(function() {
-    setInterval(function() {
-      if (arconic) {
-        arconic = false;
-        $(".big3 .third").css('opacity', '0');
-        $('.big3 .third').css('margin', '10vh 0 10vh 0');
-        setTimeout(function() {
-          $(".big3 .third").attr("src","css/images/rockwellcollins.png");
-          $(".big3 .third").css('opacity', '1');
-        }, 1000);
-      } else {
-        arconic = true;
-        $(".big3 .third").css('opacity', '0');
-        $('.big3 .third').css('margin', '0');
-        setTimeout(function() {
-          $(".big3 .third").attr("src","css/images/arconic.png");
-          $(".big3 .third").css('opacity', '1');
-        }, 1000);
-      }
-    }, 6000);
-  }, 4000);
 
   $('.seemores').click(function() {
     $('.faq').removeClass('fadeOutDown');

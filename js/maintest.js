@@ -39,22 +39,22 @@ $(window).on("load", function() {
   //for OurTeam
   panelScrollDownManual('.A', 'slideInDown', 'slideOutUp');
   panelScrollUpManual('.A1', '.A', 'slideOutUp', 'slideInDown');
-  panelScrollDownManual('.A1', 'slideInRight', 'slideOutRight');
-  panelScrollUpManual('.A2', '.A1', 'slideOutRight', 'slideInRight');
-  panelScrollDownManual('.A2', 'slideInLeft', 'slideOutLeft');
-  panelScrollUpManual('.A3', '.A2', 'slideOutLeft', 'slideInLeft');
-  panelScrollDownManual('.A3', 'slideInRight', 'slideOutRight');
-  panelScrollUpManual('.A4', '.A3', 'slideOutRight', 'slideInRight');
-  panelScrollDownManual('.A4', 'slideInLeft', 'slideOutLeft');
-  panelScrollUpManual('.A5', '.A4', 'slideOutLeft', 'slideInLeft');
+  panelScrollDownManual('.A1', 'slideInDown', 'slideOutUp');
+  panelScrollUpManual('.A2', '.A1', 'slideOutUp', 'slideInDown');
+  panelScrollDownManual('.A2', 'slideInDown', 'slideOutUp');
+  panelScrollUpManual('.A3', '.A2', 'slideOutUp', 'slideInDown');
+  panelScrollDownManual('.A3', 'slideInDown', 'slideOutUp');
+  panelScrollUpManual('.A4', '.A3', 'slideOutUp', 'slideInDown');
+  panelScrollDownManual('.A4', 'slideInDown', 'slideOutUp');
+  panelScrollUpManual('.A5', '.A4', 'slideOutUp', 'slideInDown');
 
   //for OurRobot
   panelScrollDownManual('.B', 'slideInDown', 'slideOutUp');
   panelScrollUpManual('.B1', '.B', 'slideOutUp', 'slideInDown');
-  panelScrollDownManual('.B1', 'zoomInRight', 'zoomOutRight');
-  panelScrollUpManual('.B2', '.B1', 'zoomOutRight', 'zoomInRight');
-  panelScrollDownManual('.B2', 'zoomInLeft', 'zoomOutLeft');
-  panelScrollUpManual('.B3', '.B2', 'zoomOutLeft', 'zoomInLeft');
+  panelScrollDownManual('.B1', 'slideInDown', 'slideOutUp');
+  panelScrollUpManual('.B2', '.B1', 'slideOutUp', 'slideInDown');
+  panelScrollDownManual('.B2', 'slideInDown', 'slideOutUp');
+  panelScrollUpManual('.B3', '.B2', 'slideOutUp', 'slideInDown');
 
   //awards scroll up is similar to the up arrow click, so on the other file
 
@@ -104,10 +104,8 @@ $(window).on("load", function() {
 
   function panelScrollDownManual(panel, animationForward, animationBack) {
     $(panel).on('DOMMouseScroll mousewheel', function (e) {
-      console.log("scrolling");
-      console.log(notZooming);
-      if ((e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) && notZooming) {
-        console.log("scrolling down");
+      if ((e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < -119) && notZooming) {
+        console.log(e.originalEvent.wheelDelta);
         $(this).removeClass(`animated ${animationForward}`);
         $(this).addClass(`animated ${animationBack}`);
         if (panel == '.A1' || panel == '.A3' || panel == '.A4' || panel == '.B1') {
@@ -125,7 +123,7 @@ $(window).on("load", function() {
     });
     $(panel).bind('touchmove', function(e) {
         var te = e.originalEvent.changedTouches[0].clientY;
-        if (ts > te) {
+        if (ts > te + 100) {
           console.log("scrolling down");
           $(this).removeClass(`animated ${animationForward}`);
           $(this).addClass(`animated ${animationBack}`);
@@ -141,8 +139,7 @@ $(window).on("load", function() {
   }
   function panelScrollUpManual(panel, effectedPanel, animationForward, animationBack) {
     $(panel).on('DOMMouseScroll mousewheel', function (e) {
-      if ((e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) && notZooming) {
-        console.log("scrolling up");
+      if ((e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 119) && notZooming) {
         $(effectedPanel).removeClass(`animated ${animationForward}`);
         $(effectedPanel).addClass(`animated ${animationBack}`);
         $(effectedPanel).css({
@@ -350,6 +347,9 @@ function showAwards() {
   $('.E').hide();
   $('.viz').removeClass('animated slideInDown');
   $('.viz').addClass('animated slideOutUp');
+  setTimeout(() => {
+    $('.C .stories .story .awoverlay').show();
+  }, 800);
   $('.up').show();
   currslide = 3;
 }
