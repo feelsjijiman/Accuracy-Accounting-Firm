@@ -11,7 +11,7 @@
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
-  animation-timing-function: linear;
+  animation-timing-function: ease-out;
 }
 
 .animated.infinite {
