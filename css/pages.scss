@@ -78,6 +78,11 @@ body.user-is-tabbing *:focus {
     }
   }
 }
+.B1, .B2 {
+  .indicator {
+    bottom: 4vh!important;
+  }
+}
 .A {
   display: flex;
   justify-content: left;
@@ -1456,6 +1461,8 @@ body.user-is-tabbing *:focus {
     }
   }
   .seemores {
+    position: absolute;
+    bottom: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1470,13 +1477,23 @@ body.user-is-tabbing *:focus {
     cursor: pointer;
     transition: .5s;
     z-index: 6;
-    @include flashborder;
-    animation: flashborder 2s linear infinite;
 
     &:hover {
-      animation-play-state: paused;
-      box-shadow: 0 5px 8px 0 rgba(0,0,0,0.24), 0 10px 25px 0 rgba(0,0,0,0.19);
       color: #005a9b;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      height: 5vh;
+      width: inherit;
+      @include flashborder;
+      animation: flashborder 2s linear infinite;
+
+      &:hover {
+        animation-play-state: paused;
+        box-shadow: 0 5px 8px 0 rgba(0,0,0,0.24), 0 10px 25px 0 rgba(0,0,0,0.19);
+      }
     }
   }
   .faq {
@@ -1533,8 +1550,11 @@ body.user-is-tabbing *:focus {
   }
   .B3 {
     .middle {
+      .title {
+        font-size: 40px;
+      }
       .infofromsides {
-        font-size: 15px!important;
+        font-size: 12px!important;
       }
     }
   }

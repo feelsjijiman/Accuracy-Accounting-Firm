@@ -503,7 +503,7 @@ class dropdownMan {
       backSpeed: -100,
       showCursor: false,
       onComplete: (self) => {
-        this.picChose = false;
+        this.optionSelected = false;
       }
     };
     this.textOptions = {
@@ -512,7 +512,7 @@ class dropdownMan {
       backSpeed: -3,
       showCursor: false,
       onComplete: (self) => {
-        this.picChose1 = false;
+        this.optionSelected1 = false;
       }
     };
     this.titleTyped;
