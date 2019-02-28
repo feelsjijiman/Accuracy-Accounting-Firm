@@ -468,15 +468,15 @@ $(document).keyup(function(e) {
   }
 });
 
-//our team event handlers
+//our services event handlers
 $('.title-1').click(() => {
   showOurTeam();
   ourTeamDefault();
   panelScrollUpAuto('.A', 'slideOutUp', 'slideInDown');
-  panelScrollUpAuto('.A1', 'slideOutRight', 'slideInRight');
-  panelScrollUpAuto('.A2', 'slideOutLeft', 'slideInLeft');
-  panelScrollUpAuto('.A3', 'slideOutRight', 'slideInRight');
-  panelScrollUpAuto('.A4', 'slideOutLeft', 'slideInLeft');
+  panelScrollUpAuto('.A1', 'slideOutUp', 'slideInDown');
+  panelScrollUpAuto('.A2', 'slideOutUp', 'slideInDown');
+  panelScrollUpAuto('.A3', 'slideOutUp', 'slideInDown');
+  panelScrollUpAuto('.A4', 'slideOutUp', 'slideInDown');
 });
 $('.subdiv1').click(() => {
   showOurTeam();
@@ -487,50 +487,50 @@ $('.back').click(() => {
 $('.ncleft .sub-1').click(() => {
   ourTeamDefault();
   panelScrollDownAuto('.A', 'slideInDown', 'slideOutUp');
-  panelScrollUpAuto('.A1', 'slideOutRight', 'slideInRight');
-  panelScrollUpAuto('.A2', 'slideOutLeft', 'slideInLeft');
-  panelScrollUpAuto('.A3', 'slideOutRight', 'slideInRight');
-  panelScrollUpAuto('.A4', 'slideOutLeft', 'slideInLeft');
+  panelScrollUpAuto('.A1', 'slideOutUp', 'slideInDown');
+  panelScrollUpAuto('.A2', 'slideOutUp', 'slideInDown');
+  panelScrollUpAuto('.A3', 'slideOutUp', 'slideInDown');
+  panelScrollUpAuto('.A4', 'slideOutUp', 'slideInDown');
 });
 $('.ncleft .sub-2').click(() => {
   ourTeamDefault();
   panelScrollDownAuto('.A', 'slideInDown', 'slideOutUp');
-  panelScrollDownAuto('.A1', 'slideInRight', 'slideOutRight');
-  panelScrollUpAuto('.A2', 'slideOutLeft', 'slideInLeft');
-  panelScrollUpAuto('.A3', 'slideOutRight', 'slideInRight');
-  panelScrollUpAuto('.A4', 'slideOutLeft', 'slideInLeft');
+  panelScrollDownAuto('.A1', 'slideInDown', 'slideOutUp');
+  panelScrollUpAuto('.A2', 'slideOutUp', 'slideInDown');
+  panelScrollUpAuto('.A3', 'slideOutUp', 'slideInDown');
+  panelScrollUpAuto('.A4', 'slideOutUp', 'slideInDown');
 });
 $('.ncleft .sub-3').click(() => {
   ourTeamDefault();
   panelScrollDownAuto('.A', 'slideInDown', 'slideOutUp');
-  panelScrollDownAuto('.A1', 'slideInRight', 'slideOutRight');
-  panelScrollDownAuto('.A2', 'slideInLeft', 'slideOutLeft');
-  panelScrollUpAuto('.A3', 'slideOutRight', 'slideInRight');
-  panelScrollUpAuto('.A4', 'slideOutLeft', 'slideInLeft');
+  panelScrollDownAuto('.A1', 'slideInDown', 'slideOutUp');
+  panelScrollDownAuto('.A2', 'slideInDown', 'slideOutUp');
+  panelScrollUpAuto('.A3', 'slideOutUp', 'slideInDown');
+  panelScrollUpAuto('.A4', 'slideOutUp', 'slideInDown');
 });
 $('.ncleft .sub-4').click(() => {
   ourTeamDefault();
   panelScrollDownAuto('.A', 'slideInDown', 'slideOutUp');
-  panelScrollDownAuto('.A1', 'slideInRight', 'slideOutRight');
-  panelScrollDownAuto('.A2', 'slideInLeft', 'slideOutLeft');
-  panelScrollDownAuto('.A3', 'slideInRight', 'slideOutRight');
-  panelScrollUpAuto('.A4', 'slideOutLeft', 'slideInLeft');
+  panelScrollDownAuto('.A1', 'slideInDown', 'slideOutUp');
+  panelScrollDownAuto('.A2', 'slideInDown', 'slideOutUp');
+  panelScrollDownAuto('.A3', 'slideInDown', 'slideOutUp');
+  panelScrollUpAuto('.A4', 'slideOutUp', 'slideInDown');
 });
 $('.ncleft .sub-5').click(() => {
   ourTeamDefault();
   panelScrollDownAuto('.A', 'slideInDown', 'slideOutUp');
-  panelScrollDownAuto('.A1', 'slideInRight', 'slideOutRight');
-  panelScrollDownAuto('.A2', 'slideInLeft', 'slideOutLeft');
-  panelScrollDownAuto('.A3', 'slideInRight', 'slideOutRight');
-  panelScrollDownAuto('.A4', 'slideInLeft', 'slideOutLeft');
+  panelScrollDownAuto('.A1', 'slideInDown', 'slideOutUp');
+  panelScrollDownAuto('.A2', 'slideInDown', 'slideOutUp');
+  panelScrollDownAuto('.A3', 'slideInDown', 'slideOutUp');
+  panelScrollDownAuto('.A4', 'slideInDown', 'slideOutUp');
 });
 
-//our robot event handlers
+//our company event handlers
 $('.title-2').click(() => {
   ourRobotDefault();
   panelScrollUpAuto('.B', 'slideOutUp', 'slideInDown');
-  panelScrollUpAuto('.B1', 'zoomOutRight', 'zoomInRight');
-  panelScrollUpAuto('.B2', 'zoomOutLeft', 'zoomInLeft');
+  panelScrollUpAuto('.B1', 'slideOutUp', 'slideInDown');
+  panelScrollUpAuto('.B2', 'slideOutUp', 'slideInDown');
 });
 $('.subdiv2').click(() => {
   showOurRobot();
@@ -541,20 +541,20 @@ $('.forward').click(() => {
 $('.ncright .sub-1').click(() => {
   ourRobotDefault();
   panelScrollDownAuto('.B', 'slideInDown', 'slideOutUp');
-  panelScrollUpAuto('.B1', 'zoomOutRight', 'zoomInRight');
-  panelScrollUpAuto('.B2', 'zoomOutLeft', 'zoomInLeft');
+  panelScrollUpAuto('.B1', 'slideOutUp', 'slideInDown');
+  panelScrollUpAuto('.B2', 'slideOutUp', 'slideInDown');
 });
 $('.ncright .sub-2').click(() => {
   ourRobotDefault();
   panelScrollDownAuto('.B', 'slideInDown', 'slideOutUp');
-  panelScrollDownAuto('.B1', 'zoomInRight', 'zoomOutRight');
-  panelScrollUpAuto('.B2', 'zoomOutLeft', 'zoomInLeft');
+  panelScrollDownAuto('.B1', 'slideInDown', 'slideOutUp');
+  panelScrollUpAuto('.B2', 'slideOutUp', 'slideInDown');
 });
 $('.ncright .sub-3').click(() => {
   ourRobotDefault();
   panelScrollDownAuto('.B', 'slideInDown', 'slideOutUp');
-  panelScrollDownAuto('.B1', 'zoomInRight', 'zoomOutRight');
-  panelScrollDownAuto('.B2', 'zoomInLeft', 'zoomOutLeft');
+  panelScrollDownAuto('.B1', 'slideInDown', 'slideOutUp');
+  panelScrollDownAuto('.B2', 'slideInDown', 'slideOutUp');
 });
 
 //our awards event handlers
