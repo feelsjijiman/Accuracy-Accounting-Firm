@@ -3,6 +3,10 @@
 @mixin orientation($side, $amount) {
   right: $amount;
 }
+input[type="submit"] {
+     -webkit-appearance: none!important;
+     border-radius: 0!important;
+}
 .mainimg {
   background-color: white;
   position: relative;
@@ -2044,6 +2048,13 @@ body.user-is-tabbing *:focus {
   .viz {
     .selecttitle {
       font-size: 11px;
+    }
+  }
+}
+@media (max-height: 719px) {
+  .D {
+    .talk {
+      left: 5vh;
     }
   }
 }
