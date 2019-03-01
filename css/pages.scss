@@ -1027,7 +1027,7 @@ body.user-is-tabbing *:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include layer(#3eadff, #005a9b, 5, to bottom right);
+  @include layer(#1d92e7, #1d92e7, 5, to bottom right);
 
   canvas {
     position: absolute;
@@ -1041,7 +1041,7 @@ body.user-is-tabbing *:focus {
   .stories {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     width: 90vw;
     height: 52.5vh;
@@ -1050,7 +1050,7 @@ body.user-is-tabbing *:focus {
       position: relative;
       margin: 2vw;
       width: 15vw;
-      height: 30vw;
+      height: 40vh;
       border: 5px solid white;
       cursor: pointer;
       transition-delay: .25s !important;
@@ -1068,8 +1068,8 @@ body.user-is-tabbing *:focus {
         top: 0;
         left: 0;
         width: 11vw;
-        height: 26vw;
-        padding: 2vw;
+        height: 36vh;
+        padding: 2vh 2vw 2vh 2vw;
         background-color: #1d92e7;
         text-align: center;
         font-size: 9px;
@@ -1618,11 +1618,13 @@ body.user-is-tabbing *:focus {
   .C {
     .stories {
       .story {
+        align-items: center!important;
         width: 15vw!important;
-        height: 30vw!important;
+        height: 50vh!important;
+
         .awoverlay {
           width: 11vw!important;
-          height: 26vw!important;
+          height: 46vh!important;
           h1 {
             font-size: 14px!important;
           }
@@ -1704,10 +1706,10 @@ body.user-is-tabbing *:focus {
       width: 100vw!important;
       .story {
         width: 18vw!important;
-        height: 37vw!important;
+        height: 40vh!important;
         .awoverlay {
           width: 14vw!important;
-          height: 33vw!important;
+          height: 36vh!important;
           h1 {
             font-size: 12px!important;
           }
@@ -1763,7 +1765,8 @@ body.user-is-tabbing *:focus {
   }
   .subdiv3 {
     p {
-      padding: 15vh 15vw 15vh 15vw;
+      margin-bottom: 13.5vh;
+      padding: 15vh 15vw 1.5vh 15vw;
     }
   }
   .viz {
@@ -1960,10 +1963,10 @@ body.user-is-tabbing *:focus {
     .stories {
       .story {
         width: 30vw!important;
-        height: 42vw!important;
+        height: 22vh!important;
         .awoverlay {
           width: 26vw!important;
-          height: 38vw!important;
+          height: 18vh!important;
           h1 {
             font-size: 7.5px!important;
           }
