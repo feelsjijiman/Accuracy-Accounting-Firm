@@ -1280,7 +1280,7 @@ body.user-is-tabbing *:focus {
 
     .nameinput, .phoneinput {
       width: 24vw !important;
-      margin: 0 1vw 2vh 1vw !important;
+      margin: 0 1vw 2vh 1vw;
     }
     .messageinput {
       height: 30vh;
@@ -1295,7 +1295,7 @@ body.user-is-tabbing *:focus {
       height: 5vh;
 
       .sendinputs {
-        margin: 0 0.5vw 0 0 !important;
+        margin: 0 0.5vw 0 0;
         width: 8.5vw;
         height: 5vh;
         background-color: white;
@@ -1569,6 +1569,31 @@ body.user-is-tabbing *:focus {
     }
   }
 }
+@media (max-width: 1200px) {
+  .D {
+    .contactForm {
+      justify-content: flex-start;
+
+      .nameinput, .phoneinput {
+        width: 24vw !important;
+      }
+      .phoneinput {
+        margin: 0 0 2vh 2vw!important;
+      }
+      .sendinputs {
+        margin: 0 0.5vw 0 5vw!important;
+      }
+      input, textarea {
+        margin: 0 0 2vh 5vw!important;
+      }
+    }
+    .map {
+      bottom: 13.75vh;
+      width: 37vw;
+      height: 48.25vh;
+    }
+  }
+}
 /* Largeish devices (tablets/small laptops, 768-1024) */
 @media (max-width: 1024px) {
   .viz {
@@ -1744,7 +1769,7 @@ body.user-is-tabbing *:focus {
     }
     .contactForm {
       input, textarea {
-        border-radius: 5px!important;
+        border-radius: 3px!important;
       }
     }
   }
@@ -2013,6 +2038,10 @@ body.user-is-tabbing *:focus {
         font-size: 11px;
       }
     }
+    .map {
+      bottom: 16.35vh;
+      height: 48.25vh;
+    }
   }
   .E {
     .contactForm {
@@ -2048,13 +2077,6 @@ body.user-is-tabbing *:focus {
   .viz {
     .selecttitle {
       font-size: 11px;
-    }
-  }
-}
-@media (max-height: 719px) {
-  .D {
-    .talk {
-      left: 5vh;
     }
   }
 }
