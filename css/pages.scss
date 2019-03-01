@@ -24,7 +24,7 @@ body.user-is-tabbing *:focus {
     position: absolute;
     bottom: 0;
     display: flex;
-    width: 100vw;
+    width: 50vw;
     justify-content: center;
 
     .indicator {
@@ -53,11 +53,11 @@ body.user-is-tabbing *:focus {
           }
           50% {
             transform: translateY(0px);
-            border-color: #888;
+            background-color: #888;
           }
           100% {
             transform: translateY(5px);
-            border-color: #555;
+            background-color: #555;
           }
         }
       }
@@ -76,6 +76,11 @@ body.user-is-tabbing *:focus {
         }
       }
     }
+  }
+}
+.A1, .A3 {
+  .indicatorArea {
+    right: 0;
   }
 }
 .B1, .B2 {
@@ -231,7 +236,7 @@ body.user-is-tabbing *:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50.5vw;
+    width: 50vw;
     background-image: linear-gradient(to right, #006789, #006789);
     .title {
       margin: 0 0 0 0;
@@ -870,7 +875,7 @@ body.user-is-tabbing *:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 33.33vw;
+    width: 30vw;
     height: 100vh;
 
     .line {
@@ -882,6 +887,7 @@ body.user-is-tabbing *:focus {
   }
   .middle {
     background: #b4b4b4;
+    width: 40vw;
 
     .line {
       animation-delay: 2s;
@@ -1014,7 +1020,7 @@ body.user-is-tabbing *:focus {
   }
   .sources {
     max-width: 20vw;
-    left: 10vw;
+    left: 6vw;
   }
 }
 .C {
@@ -1831,7 +1837,7 @@ body.user-is-tabbing *:focus {
     }
   }
   .title {
-    font-size: 25px!important;
+    font-size: 22px!important;
   }
   .A1, .A2, .A3, .A4, .A5 {
     .title {
@@ -1932,7 +1938,7 @@ body.user-is-tabbing *:focus {
     }
     .left, .right {
       .subtitle {
-        font-size: 14px!important;
+        font-size: 12px!important;
       }
       .droplabel {
         font-size: 10px!important;

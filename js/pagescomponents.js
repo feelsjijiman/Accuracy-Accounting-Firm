@@ -519,37 +519,42 @@ class dropdownMan {
     this.textTyped;
     this.optionSelected = false;
     this.optionSelected1 = false;
+    this.clickedBefore = false;
   }
 
   handleChoice(selected, section, title, output) {
     $(`${this.panel} ${section} .dropdown .dropmenu .dropsel${selected}`).click(() => {
-      if (!this.optionSelected && !this.optionSelected1) {
-        let editedTitle = title.split('').join('\xa0').toUpperCase();
-        this.titleOptions.strings[1] = editedTitle;
-        this.textOptions.strings[1] = output;
-        this.titleTyped = new Typed(this.outputarea[0], this.titleOptions);
-        this.textTyped = new Typed(this.outputarea[1], this.textOptions);
-        this.optionSelected = true;
-        this.optionSelected1 = true;
-        if (section == '.left') {
-          setTimeout(function() {
-            $('.B3 .left .dropdown .dropmenu .dropsel').removeClass('fadeInDown');
-            $('.B3 .left .dropdown .dropmenu .dropsel').addClass('fadeOutUp');
-            $('.B3 .left .dropdown .dropmenu .dropsel').fadeOut(1500);
-            $('.B3 .left .dropdown .droplabel img').removeClass('flip180');
-            $('.B3 .left .dropdown .droplabel img').addClass('unflip180');
-          }, 500);
-          dropdownleftopen = false;
-        } else if (section == '.right') {
-          setTimeout(function() {
-            $('.B3 .right .dropdown .dropmenu .dropsel').removeClass('fadeInDown');
-            $('.B3 .right .dropdown .dropmenu .dropsel').addClass('fadeOutUp');
-            $('.B3 .right .dropdown .dropmenu .dropsel').fadeOut(1500);
-            $('.B3 .right .dropdown .droplabel img').removeClass('flip180');
-            $('.B3 .right .dropdown .droplabel img').addClass('unflip180');
-            dropdownrightopen = false;
-          }, 500);
-        }
+      let editedTitle = title.split('').join('\xa0').toUpperCase();
+      this.titleOptions.strings[1] = editedTitle;
+      this.textOptions.strings[1] = output;
+      if (!this.clickedBefore) {
+        this.clickedBefore = true;
+      } else {
+        this.titleTyped.destroy();
+        this.textTyped.destroy();
+      }
+      this.titleTyped = new Typed(this.outputarea[0], this.titleOptions);
+      this.textTyped = new Typed(this.outputarea[1], this.textOptions);
+      this.optionSelected = true;
+      this.optionSelected1 = true;
+      if (section == '.left') {
+        setTimeout(function() {
+          $('.B3 .left .dropdown .dropmenu .dropsel').removeClass('fadeInDown');
+          $('.B3 .left .dropdown .dropmenu .dropsel').addClass('fadeOutUp');
+          $('.B3 .left .dropdown .dropmenu .dropsel').fadeOut(1500);
+          $('.B3 .left .dropdown .droplabel img').removeClass('flip180');
+          $('.B3 .left .dropdown .droplabel img').addClass('unflip180');
+        }, 500);
+        dropdownleftopen = false;
+      } else if (section == '.right') {
+        setTimeout(function() {
+          $('.B3 .right .dropdown .dropmenu .dropsel').removeClass('fadeInDown');
+          $('.B3 .right .dropdown .dropmenu .dropsel').addClass('fadeOutUp');
+          $('.B3 .right .dropdown .dropmenu .dropsel').fadeOut(1500);
+          $('.B3 .right .dropdown .droplabel img').removeClass('flip180');
+          $('.B3 .right .dropdown .droplabel img').addClass('unflip180');
+          dropdownrightopen = false;
+        }, 500);
       }
     });
   }
