@@ -3,7 +3,7 @@
 @mixin orientation($side, $amount) {
   right: $amount;
 }
-input[type="submit"] {
+input[type="submit"],input[type="time"],input[type="date"] {
      -webkit-appearance: none!important;
      border-radius: 0!important;
 }
