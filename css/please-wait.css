@@ -10,7 +10,7 @@ body.pg-loading {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 1000000000;
+  z-index: 10000000000000000000;
   opacity: 1;
   background-color: #FFF;
   -webkit-transition: background-color 0.4s ease-in-out 0s;

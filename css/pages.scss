@@ -57,11 +57,9 @@ body.user-is-tabbing *:focus {
           }
           50% {
             transform: translateY(0px);
-            background-color: #888;
           }
           100% {
             transform: translateY(5px);
-            background-color: #555;
           }
         }
       }
@@ -72,11 +70,9 @@ body.user-is-tabbing *:focus {
         }
         50% {
           transform: translateY(5px);
-          border-color: #888;
         }
         100% {
           transform: translateY(7.5px);
-          border-color: #555;
         }
       }
     }
@@ -472,7 +468,7 @@ body.user-is-tabbing *:focus {
 }
 .halfgone {
   &::after {
-    opacity: 0.6;
+    opacity: 0.2;
   }
 }
 //                          //
@@ -588,7 +584,7 @@ body.user-is-tabbing *:focus {
     .topleft {
       &::after {
         content: "";
-        background: url('../images/barrett.png');
+        background: url('../images/barrett.jpg');
         top: 0;
         left: 0;
         bottom: 0;
@@ -601,7 +597,7 @@ body.user-is-tabbing *:focus {
     .topright {
       &::after {
         content: "";
-        background: url('../images/andrews.png');
+        background: url('../images/andrews.jpg');
         top: 0;
         left: 0;
         bottom: 0;
@@ -648,6 +644,7 @@ body.user-is-tabbing *:focus {
       cursor: pointer;
     }
   }
+
 }
 .B2 {
   display: flex;

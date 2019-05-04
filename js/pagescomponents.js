@@ -69,13 +69,13 @@ $(window).on("load", function() {
     a5Maker.newPanel("a p p o i n t m e n t s", "Appointments will be approximately two hours long and booking one is completely free! Just go to the Appointment area of our website and fill in the form!", ".A5", ".topside");
   });
   $('.A5 .botside .images .imgkindaleft').click(function() {
-    a5Maker.newPanel("l e v e l \xa0\xa01", "The first level is if your business makes less than $100,000 in revenue a year. We charge $2,500 for every category of services in addition to 2% of your revenue.", ".A5", ".topside");
+    a5Maker.newPanel("l e v e l \xa0\xa01", "The first level is if your business makes less than $100,000 in revenue a year. We charge $2,500 for every category of services in addition to 2% of your revenue. Set an appointment for more details - we'd be happy to talk!", ".A5", ".topside");
   });
   $('.A5 .botside .images .imgkindaright').click(function() {
-    a5Maker.newPanel("l e v e l \xa0\xa02", "The second level is if your business makes less than $1,000,000 in revenue a year. We charge $5,500 for every category of services in addition to 5% of your revenue.", ".A5", ".topside");
+    a5Maker.newPanel("l e v e l \xa0\xa02", "The second level is if your business makes less than $1,000,000 in revenue a year. We charge $5,500 for every category of services in addition to 5% of your revenue. Set an appointment for more details - we'd be happy to talk!", ".A5", ".topside");
   });
   $('.A5 .botside .images .imgfarright').click(function() {
-    a5Maker.newPanel("l e v e l \xa0\xa03", "The third level is if your business makes more than or equal to $1,000,000 in revenue a year. We charge $7,500 for every category of services in addition to 9% of your revenue.", ".A5", ".topside");
+    a5Maker.newPanel("l e v e l \xa0\xa03", "The third level is if your business makes more than or equal to $1,000,000 in revenue a year. We charge $7,500 for every category of services in addition to 9% of your revenue. Set an appointment for more details - we'd be happy to talk!", ".A5", ".topside");
   });
 
   //b1andb2
@@ -402,41 +402,36 @@ class panelAndDefaults {
     this.titleString = '';
     this.textOptions = {
       strings: [" ", this.textString],
-      typeSpeed: -100,
-      backSpeed: -100,
+      typeSpeed: -1000000,
+      backSpeed: -1000000,
       showCursor: false,
-      onComplete: (self) => {
-        this.picChose1 = false;
-      }
     };
     this.titleOptions = {
       strings: [" ", this.titleString],
       typeSpeed: -3,
       backSpeed: -3,
       showCursor: false,
-      onComplete: (self) => {
-        this.picChose = false;
-      }
     };
     this.titleTyped;
     this.textTyped;
     this.picChose = false;
-    this.picChose1 = false;
   }
 
   newPanel(titleString, textString, panel, side) {
-    if (!this.picChose && !this.picChose1) {
-      titleString = titleString.toUpperCase();
-      this.titleOptions.strings[1] = titleString;
-      this.textOptions.strings[1] = textString;
-      $('.line').hide();
-      setTimeout(() => {$('.line').show()}, 1000);
-      this.titleTyped = new Typed(`${panel} ${side} .title`, this.titleOptions);
-      this.textTyped = new Typed(`${panel} ${side} .maintext`, this.textOptions);
-      this.textTyped.start();
+    if (!this.picChose) {
       this.picChose = true;
-      this.picChose1 = true;
+    } else {
+      this.titleTyped.destroy();
+      this.textTyped.destroy();
     }
+    titleString = titleString.toUpperCase();
+    this.titleOptions.strings[1] = titleString;
+    this.textOptions.strings[1] = textString;
+    $('.line').hide();
+    setTimeout(() => {$('.line').show()}, 1000);
+    this.titleTyped = new Typed(`${panel} ${side} .title`, this.titleOptions);
+    this.textTyped = new Typed(`${panel} ${side} .maintext`, this.textOptions);
+    this.textTyped.start();
   }
 }
 

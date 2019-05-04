@@ -142,11 +142,37 @@ a {
   color: black;
   z-index: 99;
   h1 {
-    font-size: 30px;
+    position: relative;
+    font-size: 32px;
     color: #0069FF;
+
+    a::after {
+      background: #0069FF;
+    }
   }
   p {
+    font-size: 20px;
     margin-left: 5%;
+
+    a::after {
+      background: black;
+      height: 2px;
+    }
+  }
+  a {
+    display: inline-block;;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 3px;
+      transition: width .2s;
+    }
+    &:hover:after {
+      width: 100%;
+      transition: .5s;
+    }
   }
   .quote {
     position: absolute;
