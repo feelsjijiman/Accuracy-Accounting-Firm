@@ -22,6 +22,7 @@ $(window).on("load", function() {
   $('.caption').hide();
   $('.codesnippet').hide();
   $('.anotherqanda').hide();
+  $('.videoqanda').hide();
   $('.client').hide();
   $('.A2, .A3, .A4, .A5, .B1, .B2, .B3').hide();
   //declaring instances
@@ -294,20 +295,15 @@ $(window).on("load", function() {
       $('.nav .menu-open').removeClass('invertedColors');
       $('.nav .back').removeClass('invertedColors');
     }
-
+/*
     if (classed.search('C c') > 0) {
-      $('.C').attr('id', 'particles-js');
-      $('.D').removeAttr('particles-js');
-      $('.E').removeAttr('particles-js');
-    } else if (classed.search('D d') > 0) {
-      $('.D').attr('id', 'particles-js');
-      $('.C').removeAttr('particles-js');
-      $('.E').removeAttr('particles-js');
+      $('.morestories').attr('id', 'particles-js');
+      $('.faq').removeAttr('particles-js');
     } else if (classed.search('E e') > 0) {
-      $('.E').attr('id', 'particles-js');
-      $('.D').removeAttr('particles-js');
-      $('.C').removeAttr('particles-js');
+      $('.morestories').removeAttr('particles-js');
+      $('.faq').attr('id', 'particles-js');
     }
+    */
   });
 
   //Contact page validation/tabbing
@@ -351,7 +347,7 @@ $(window).on("load", function() {
     $('.up').show();
   });
 
-  // sponsors page
+  // faq and appts
   let moreSponOpen = false;
 
   $('.seemores').click(function() {
@@ -377,21 +373,29 @@ $(window).on("load", function() {
     }
   });
 
+  let slide = 0;
+
   $('.nextqs').click(() => {
-    if ($('.nextqs').attr('src') == 'css/images/backwardw.png') {
+    if (slide == 0) {
       $('.qanda').removeClass('fadeInRightBig');
-      $('.anotherqanda').removeClass('fadeOutLeftBig');
+      $('.anotherqanda').removeClass('fadeOutRightBig');
       $('.qanda').addClass('fadeOutRightBig');
-      $('.anotherqanda').addClass('fadeInLeftBig');
+      $('.anotherqanda').addClass('fadeInRightBig');
       $('.anotherqanda').show();
-      $('.nextqs').attr('src', 'css/images/forward.png');
+    } else if (slide == 1) {
+      $('.anotherqanda').removeClass('fadeInRightBig');
+      $('.videoqanda').removeClass('fadeOutRightBig');
+      $('.anotherqanda').addClass('fadeOutRightBig');
+      $('.videoqanda').addClass('fadeInRightBig');
+      $('.videoqanda').show();
     } else {
+      $('.videoqanda').removeClass('fadeInRightBig');
       $('.qanda').removeClass('fadeOutRightBig');
-      $('.anotherqanda').removeClass('fadeInLeftBig');
+      $('.videoqanda').addClass('fadeOutRightBig');
       $('.qanda').addClass('fadeInRightBig');
-      $('.anotherqanda').addClass('fadeOutLeftBig');
-      $('.nextqs').attr('src', 'css/images/backwardw.png');
+      slide = -1;
     }
+    slide++;
   });
 });
 

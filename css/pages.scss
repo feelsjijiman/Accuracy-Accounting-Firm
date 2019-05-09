@@ -650,7 +650,7 @@ body.user-is-tabbing *:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include layer(#65dbf2, #65dbf2, 7);
+  @include layer(#30c8e5, #30c8e5, 7);
 
   .hover {
     position: absolute;
@@ -1028,7 +1028,11 @@ body.user-is-tabbing *:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include layer(#1d92e7, #1d92e7, 5, to bottom right);
+  background-image: url('../images/image1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 5;
 
   canvas {
     position: absolute;
@@ -1068,10 +1072,10 @@ body.user-is-tabbing *:focus {
         position: absolute;
         top: 0;
         left: 0;
-        width: 11vw;
+        width: 11.1vw;
         height: 36vh;
         padding: 2vh 2vw 2vh 2vw;
-        background-color: #1d92e7;
+        background-color: white;
         text-align: center;
         font-size: 9px;
         letter-spacing: 3px;
@@ -1080,7 +1084,7 @@ body.user-is-tabbing *:focus {
         cursor: pointer;
 
         h1 {
-          color: white;
+          color: black;
         }
 
       }
@@ -1097,7 +1101,7 @@ body.user-is-tabbing *:focus {
     height: 5vh;
     padding: 0 1vw 0 1vw;
     background-color: white;
-    color: #0077cc;
+    color: #151515;
     font-family: 'Hansief';
     font-size: 25px;
     text-transform: uppercase;
@@ -1107,7 +1111,7 @@ body.user-is-tabbing *:focus {
 
     &:hover {
       box-shadow: 0 5px 8px 0 rgba(0,0,0,0.24), 0 10px 25px 0 rgba(0,0,0,0.19);
-      color: #005a9b;
+      color: black;
     }
   }
   .morestories {
@@ -1119,7 +1123,7 @@ body.user-is-tabbing *:focus {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: #35a1f0;
+    background-color: #bcbcbc;
     z-index: 6;
 
     .morestorieslist {
@@ -1154,7 +1158,7 @@ body.user-is-tabbing *:focus {
           width: 11vw;
           height: 26vw;
           padding: 2vw;
-          background-color: #1d92e7;
+          background-color: white;
           text-align: center;
           font-size: 9px;
           letter-spacing: 3px;
@@ -1163,7 +1167,7 @@ body.user-is-tabbing *:focus {
           cursor: pointer;
 
           h1 {
-            color: white;
+            color: black;
           }
 
         }
@@ -1517,7 +1521,7 @@ body.user-is-tabbing *:focus {
     overflow-x: hidden;
     overflow-y: hidden;
 
-    .qanda, .anotherqanda {
+    .qanda, .anotherqanda, .videoqanda {
       position: absolute;
       top: 25vh;
       left: 15vw;
@@ -1525,12 +1529,23 @@ body.user-is-tabbing *:focus {
       height: 50vh;
       color: white;
       font-family: 'Titillium Web';
+      z-index: 1000;
 
       .question {
         font-size: 20px;
       }
       .answer {
         font-size: 15px;
+      }
+    }
+    .videoqanda {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .question {
+        text-align: center;
+        margin-bottom: 3vh;
       }
     }
     .nextqs {
@@ -1541,6 +1556,7 @@ body.user-is-tabbing *:focus {
       height: 4vh;
       cursor: pointer;
       transition: 0.35s;
+      z-index: 1000;
 
       &:hover {
         width: 5vh;
@@ -1551,8 +1567,11 @@ body.user-is-tabbing *:focus {
 }
 @media (max-width: 1440px) {
   .viz {
-    .selecttitle {
+    .f1, .s1 {
       font-size: 45px;
+    }
+    .t1 {
+      font-size: 35px;
     }
   }
   .B3 {
@@ -1591,8 +1610,8 @@ body.user-is-tabbing *:focus {
     }
   }
 }
-/* Largeish devices (tablets/small laptops, 768-1024) */
-@media (max-width: 1024px) {
+/* Largeish devices (tablets/small laptops, 768-1080) */
+@media (max-width: 1080px) {
   .viz {
     .selecttitle {
       font-size: 32px;
@@ -1772,7 +1791,7 @@ body.user-is-tabbing *:focus {
   }
   .E {
     .faq {
-      .anotherqanda, .qanda {
+      .anotherqanda, .qanda, .videoqanda {
         .question, .answer {
           font-size: 12px;
         }
@@ -2059,7 +2078,7 @@ body.user-is-tabbing *:focus {
       .qanda, .anotherqanda {
         top: 15vh !important;
         h1 {
-            font-size: 9.25px!important;
+            font-size: 8px!important;
         }
       }
     }
