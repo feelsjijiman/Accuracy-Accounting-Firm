@@ -7,9 +7,7 @@ $(window).on("load", function() {
   } catch {
     console.log("no trademark!")
   }
-  window.addEventListener( 'touchmove', function(e) {
-    e.preventDefault();
-  }, {passive: false});
+  $('.A2, .A3, .A4, .A5, .B1, .B2, .B3').hide();
   $('.closeSec').hide();
   $('.infotext').hide();
   $('.boxtitle').hide();
@@ -24,7 +22,11 @@ $(window).on("load", function() {
   $('.anotherqanda').hide();
   $('.videoqanda').hide();
   $('.client').hide();
-  $('.A2, .A3, .A4, .A5, .B1, .B2, .B3').hide();
+  $('iframe.neatvid').attr('src', 'https://www.youtube.com/embed/x4UJVfnCBms');
+  $('iframe.neatiframe').attr('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyDeqmGdMF3QWlvlmnhrOesYqLYlqQkyGGw&q=1+Hacker+Way,Menlo+Park,+CA+94025');
+  window.addEventListener( 'touchmove', function(e) {
+    e.preventDefault();
+  }, {passive: false});
   //declaring instances
   const a2Maker = new panelAndDefaults();
   const a3Maker = new panelAndDefaults();
@@ -398,6 +400,144 @@ $(window).on("load", function() {
     slide++;
   });
 });
+
+//validation function for lets talk
+function validateEmail() {
+  let info = [document.forms["contactForm"]["name"].value, document.forms["contactForm"]["phone"].value, document.forms["contactForm"]["email"].value, document.forms["contactForm"]["subject"].value, document.forms["contactForm"]["message"].value];
+  let filled = true;
+  let nonfilled = [];
+
+  info.forEach(function(value, index) {
+    if (value == "" || value == null) {
+      filled = false;
+
+      switch (index) {
+        case 0:
+          nonfilled.push('name');
+          break;
+        case 1:
+          nonfilled.push('phone');
+          break;
+        case 2:
+          nonfilled.push('email');
+          break;
+        case 3:
+          nonfilled.push('subject');
+          break;
+        case 4:
+          nonfilled.push('message');
+      }
+    }
+  });
+
+  if (!filled) {
+
+    if (nonfilled.length == 2) {
+      nonfilled[0] = (`${nonfilled[0]} and ${nonfilled[1]}`);
+      nonfilled.pop();
+    } else {
+      nonfilled.forEach(function(value, index) {
+        if (index != 0 && index != (nonfilled.length - 1)) {
+          nonfilled[index] = (` ${nonfilled[index]}`);
+        }
+
+        if (index == (nonfilled.length - 1) && nonfilled.length != 1) {
+          nonfilled[index] = (` and ${nonfilled[index]}`);
+        }
+      });
+    }
+
+    alert(`Please fill in your ${nonfilled}!`);
+    return false;
+
+  } else {
+    $('.sent').removeClass('fadeOut');
+    $('.sent').addClass('fadeIn');
+    $('.sent').show();
+    setTimeout(function() {
+      document.forms["contactForm"]["name"].value = "";
+      document.forms["contactForm"]["phone"].value = "";
+      document.forms["contactForm"]["email"].value = "";
+      document.forms["contactForm"]["subject"].value = "";
+      document.forms["contactForm"]["message"].value = "";
+    }, 1000);
+    setTimeout(function() {
+      $('.sent').removeClass('fadeIn');
+      $('.sent').addClass('fadeOut');
+    }, 2000);
+  };
+};
+
+//validation function for appt and faq
+function validateAppt() {
+  let info = [document.forms["apptForm"]["name"].value, document.forms["apptForm"]["phone"].value, document.forms["apptForm"]["email"].value, document.forms["apptForm"]["business"].value, document.forms["apptForm"]["date"].value, document.forms["apptForm"]["time"].value];
+  let filled = true;
+  let nonfilled = [];
+
+  info.forEach(function(value, index) {
+    if (value == "" || value == null) {
+      filled = false;
+
+      switch (index) {
+        case 0:
+          nonfilled.push('name');
+          break;
+        case 1:
+          nonfilled.push('phone');
+          break;
+        case 2:
+          nonfilled.push('email');
+          break;
+        case 3:
+          nonfilled.push('business');
+          break;
+        case 4:
+          nonfilled.push('date');
+          break;
+        case 5:
+          nonfilled.push('time');
+          break;
+      }
+    }
+  });
+
+  if (!filled) {
+
+    if (nonfilled.length == 2) {
+      nonfilled[0] = (`${nonfilled[0]} and ${nonfilled[1]}`);
+      nonfilled.pop();
+    } else {
+      nonfilled.forEach(function(value, index) {
+        if (index != 0 && index != (nonfilled.length - 1)) {
+          nonfilled[index] = (` ${nonfilled[index]}`);
+        }
+
+        if (index == (nonfilled.length - 1) && nonfilled.length != 1) {
+          nonfilled[index] = (` and ${nonfilled[index]}`);
+        }
+      });
+    }
+
+    alert(`Please fill in your ${nonfilled}!`);
+    return false;
+
+  } else {
+    $('.sent').removeClass('fadeOut');
+    $('.sent').addClass('fadeIn');
+    $('.sent').show();
+    setTimeout(function() {
+      document.forms["apptForm"]["name"].value = "";
+      document.forms["apptForm"]["phone"].value = "";
+      document.forms["apptForm"]["email"].value = "";
+      document.forms["apptForm"]["subject"].value = "";
+      document.forms["apptForm"]["message"].value = "";
+    }, 1000);
+    setTimeout(function() {
+      $('.sent').removeClass('fadeIn');
+      $('.sent').addClass('fadeOut');
+    }, 2000);
+  };
+};
 
 //classes for a
 class panelAndDefaults {
