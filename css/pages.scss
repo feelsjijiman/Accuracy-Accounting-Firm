@@ -589,8 +589,8 @@ body.user-is-tabbing *:focus {
       align-items: center;
       box-sizing: border-box;
       border: 5px solid white;
-      width: 24vw;
-      height: 30vh;
+      width: 24.2vw;
+      height: 30.2vh;
       transition: 1s;
       @include flashborder;
       animation: flashborder 2s linear infinite;
@@ -762,8 +762,8 @@ body.user-is-tabbing *:focus {
       align-items: center;
       box-sizing: border-box;
       border: 5px solid white;
-      width: 24vw;
-      height: 30vh;
+      width: 24.2vw;
+      height: 30.2vh;
       @include flashborder;
       transition: 1s;
       animation: flashborder 2s linear infinite;
@@ -1249,8 +1249,7 @@ body.user-is-tabbing *:focus {
     }
     .doneseeing {
       position: absolute;
-      bottom: 0;
-      margin: 5vh 0 5vh 0;
+      margin: 85vh 0 0 0;
       width: 30px;
       height: 30px;
       cursor: pointer;
@@ -1687,6 +1686,9 @@ body.user-is-tabbing *:focus {
     .selecttitle {
       font-size: 32px;
     }
+    .t1 {
+      font-size: 26px;
+    }
   }
   .title {
     font-size: 50px!important;
@@ -1771,9 +1773,20 @@ body.user-is-tabbing *:focus {
 }
 /* Medium devices (tablets, 576-768) */
 @media (max-width: 769px) {
+  .navcover {
+    h1 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
   .viz {
     .selecttitle {
       font-size: 24px;
+    }
+    .t1 {
+      font-size: 18px;
     }
   }
   .title {
@@ -1870,8 +1883,31 @@ body.user-is-tabbing *:focus {
     }
   }
 }
+@media (max-width: 700px) {
+  .C {
+    .morestories {
+      .morestorieslist {
+        .story {
+          .awoverlay {
+            h1 {
+              font-size: 10px!important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 /* Small devices (landscape phones, 420-576) */
 @media (max-width: 576px) {
+  .navcover {
+    h1 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
   .front {
     .iconArea {
       p {
@@ -1888,6 +1924,9 @@ body.user-is-tabbing *:focus {
   .viz {
     .selecttitle {
       font-size: 20px;
+    }
+    .t1 {
+      font-size: 16px;
     }
   }
   .title {
@@ -1926,6 +1965,10 @@ body.user-is-tabbing *:focus {
           }
         }
       }
+      .doneseeing {
+        width: 17px;
+        height: 17px;
+      }
     }
   }
   .D {
@@ -1937,6 +1980,16 @@ body.user-is-tabbing *:focus {
       input, textarea {
         border-radius: 4px!important;
       }
+    }
+    .talk {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .E {
+    .closeaptfaq {
+      width: 17px;
+      height: 17px;
     }
   }
 }
@@ -1953,6 +2006,9 @@ body.user-is-tabbing *:focus {
   .viz {
     .selecttitle {
       font-size: 15px;
+    }
+    .t1 {
+      font-size: 13px;
     }
   }
   .title {
@@ -2168,6 +2224,14 @@ body.user-is-tabbing *:focus {
   .viz {
     .selecttitle {
       font-size: 11px;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .viz {
+    .t1 {
+      font-size: 9.5px;
     }
   }
 }
