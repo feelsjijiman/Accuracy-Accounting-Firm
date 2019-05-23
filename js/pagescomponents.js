@@ -551,12 +551,15 @@ class panelAndDefaults {
       typeSpeed: -1000000,
       backSpeed: -1000000,
       showCursor: false,
+      onComplete: (self) => {
+        this.picChose = false;
+      }
     };
     this.titleOptions = {
       strings: [" ", this.titleString],
       typeSpeed: -3,
       backSpeed: -3,
-      showCursor: false,
+      showCursor: true,
     };
     this.titleTyped;
     this.textTyped;
@@ -564,12 +567,11 @@ class panelAndDefaults {
   }
 
   newPanel(titleString, textString, panel, side) {
-    if (!this.picChose) {
-      this.picChose = true;
-    } else {
+    if (this.picChose) {
       this.titleTyped.destroy();
       this.textTyped.destroy();
     }
+    this.picChose = true;
     titleString = titleString.toUpperCase();
     this.titleOptions.strings[1] = titleString;
     this.textOptions.strings[1] = textString;
