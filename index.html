@@ -403,7 +403,8 @@
       </div>
       <div class="videoqanda animated">
         <h1 class="question">Here's a video from <a style="text-decoration: underline" href="https://www.youtube.com/user/BookkeepingMaster">Bookeeping Master</a> introducing accounting in 7 quick minutes! All credit given to <a style="text-decoration: underline" href="https://www.youtube.com/user/BookkeepingMaster">Bookeeping Master</a>!</h1>
-        <iframe name="youtube video" title="youtube video" class="neatvid" style="z-index: 1000; width: 60vw; height: 50vh;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id="neatvid" class="neatvid" style="z-index: 1000; width: 60vw; height: 50vh;">
+        </div>
       </div>
     </div>
     </div>
@@ -431,6 +432,45 @@
   },
   "telephone": "6266674559"
 }
+</script>
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('neatvid', {
+    videoId: 'x4UJVfnCBms',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+}
+
+// 5. The API calls this function when the player's state changes.
+//    The function indicates that when playing a video (state=1),
+//    the player should play for six seconds and then stop.
+var done = false;
+function onPlayerStateChange(event) {
+}
+function stopVideo() {
+  player.stopVideo();
+}
+
+$('.nav .menu-open, .E .closeaptfaq, .E .faq .nextqs').click(function() {
+  player.pauseVideo();
+});
 </script>
 </body>
 </html>
